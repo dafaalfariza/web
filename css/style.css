@@ -115,7 +115,13 @@ ol li p {
     line-height: 1.6;
 }
 
+ul li.bullet::marker {
+    color: yellowgreen;
+}
 
+ul li {
+    margin-left: 1em;
+}
 @keyframes fadeIn {
     from {
         opacity: 0;
