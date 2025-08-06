@@ -115,7 +115,6 @@ ol li p {
     line-height: 1.6;
 }
 
-<<<<<<< HEAD
 ul li.bullet::marker {
     color: yellowgreen;
 }
@@ -123,9 +122,7 @@ ul li.bullet::marker {
 ul li {
     margin-left: 1em;
 }
-=======
 
->>>>>>> 5596a9ae088c2b4a9e45f7b6c0bb37a09dac08ce
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -211,11 +208,8 @@ ul li {
     .logo img {
         height: 30px;
     }
-<<<<<<< HEAD
 
     .neon-title {
         width: 100%;
     }
-=======
->>>>>>> 5596a9ae088c2b4a9e45f7b6c0bb37a09dac08ce
 }
