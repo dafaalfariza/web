@@ -207,4 +207,8 @@ ul li {
     .logo img {
         height: 30px;
     }
+
+    .neon-title {
+        width: 100%;
+    }
 }
