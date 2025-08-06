@@ -226,7 +226,7 @@ body {
 /* ================= */
 /* Small Mobile View */
 /* ================= */
-@media (max-width: 480px) {
+@media (max-width: 420px) {
     .navbar-container {
         padding: 0 1rem;
     }

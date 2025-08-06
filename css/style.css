@@ -214,3 +214,83 @@ ul li {
         width: 100%;
     }
 }
+
+@media (max-width: 420px) {
+    .full-box {
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    .full-box h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .full-box p,
+    ol li p {
+        font-size: 1,3em;
+        text-align: justify;
+    }
+
+    ol {
+        padding-left: 1.5em;
+    }
+
+    ol.angka {
+        padding-left: 1.5em;
+    }
+
+    ol li {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1em;
+    }
+
+    .judul {
+        font-size: 2em;
+        padding: 0 10px;
+        line-height: 1.3;
+    }
+
+    .sub {
+        font-size: 0.9em;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .nav-extra {
+        margin-top: 10px;
+        margin-right: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .neon-title {
+        width: 100%;
+    }
+}
