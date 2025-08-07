@@ -84,6 +84,14 @@ ol {
     color: #e2e8f0;
 }
 
+li {
+    color: mediumslateblue;
+}
+
+li.judul-kecil {
+    color: yellowgreen;
+}
+
 ol.angka {
     font-family: 'Press Start 2P', cursive;
     max-width: 800px;
@@ -91,7 +99,7 @@ ol.angka {
     padding-left: 2.5em;
     list-style-type: decimal;
     list-style-position: outside;
-    color: #e2e8f0;
+    color: yellowgreen;
 }
 
 ol li {
