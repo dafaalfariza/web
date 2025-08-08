@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML Preview Terminal Style (Scroll)</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+        background-color: #1e1e1e;
+        color: #fff;
+        font-family: monospace;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .bash-container {
+        background-color: #2d2d2d;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 800px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+
+        /* Bisa di-resize */
+        resize: both;
+        overflow: auto;
+        min-width: 320px;
+        min-height: 200px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #code-view, #preview-view {
+        flex: 1;
+    }
+
+    pre, iframe {
+        height: 100%;
+    }
+
+    .bash-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1b1b1b;
+        padding: 5px 10px;
+    }
+    .bash-title {
+        font-weight: bold;
+        color: #4caf50;
+    }
+    .copy-btn, .toggle-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 3px 8px;
+        border-radius: 3px;
+    }
+    .copy-btn:hover, .toggle-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    pre {
+        margin: 0;
+        padding: 15px;
+        background-color: #1e1e1e;
+        color: #d4d4d4;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        font-size: 14px;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .tag { color: #569cd6; }
+    .attr { color: #9cdcfe; }
+    .value { color: #ce9178; }
+    .text { color: #d4d4d4; }
+    iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        display: block;
+        background-color: white;
+        overflow-y: auto;
+    }
+
+    /* Media query untuk layar kecil / HP */
+    @media (max-width: 420px) {
+        .bash-container {
+            min-width: 280px;  /* Lebar minimal di HP */
+            width: 100%;       /* Full lebar di layar kecil */
+            resize: both;      /* Tetap bisa resize */
+        }
+        .bash-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+        .copy-btn, .toggle-btn {
+            font-size: 12px;
+            padding: 2px 6px;
+        }
+        pre, iframe {
+            font-size: 12px;
+            max-height: 200px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="bash-container">
+    <div class="bash-header">
+        <span class="bash-title">html</span>
+        <div>
+            <button class="copy-btn" onclick="copyCode(this)">
+                <i class="fa-solid fa-copy"></i>
+            </button>
+            <button class="toggle-btn" onclick="toggleView(this)">Lihat Source</button>
+        </div>
+    </div>
+    <div id="code-view" style="display:none;">
+<pre id="html-code">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
+    &lt;title&gt;ApayCoding&lt;/title&gt;
+
+    &lt;link rel="stylesheet" href="../css/style.css"&gt;
+    &lt;link rel="stylesheet" href="../css/navbar.css"&gt;
+
+    &lt;link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Exo+2&amp;display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;style&gt;
+    @import url('https://fonts.googleapi.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap');
+    /* CSS kamu di sini */
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;nav class="navbar"&gt;
+        &lt;div class="navbar-container"&gt;
+            &lt;a href="../index.html" class="navbar-logo"&gt;&lt;img src="../images/apaycoding_logo.png" alt="ApayCoding"&gt;&lt;/a&gt;
+            &lt;button class="navbar-toggle"&gt;
+                &lt;span class="bar"&gt;&lt;/span&gt;
+                &lt;span class="bar"&gt;&lt;/span&gt;
+                &lt;span class="bar"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;ul class="navbar-menu"&gt;
+                &lt;li&gt;&lt;a href="../index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown"&gt;
+                    &lt;a href="#" class="active"&gt;Materi&lt;/a&gt;
+                    &lt;ul class="dropdown-menu"&gt;
+                        &lt;li&gt;&lt;a href="kj.html"&gt;KJ&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="tjkn.html"&gt;TJKN&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;UI/UX Design&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;h1 class="neon-title"&gt;Keamanan Jaringan&lt;/h1&gt;
+    &lt;div class="full-box"&gt;
+
+    &lt;/div&gt;
+    &lt;script&gt;
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        navbarToggle.addEventListener('click', () =&gt; {
+            navbarToggle.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle =&gt; {
+            toggle.addEventListener('click', (e) =&gt; {
+                const parent = toggle.parentElement;
+                if (window.innerWidth &lt;= 880) {
+                    e.preventDefault();
+                    parent.classList.toggle('open');
+                    document.querySelectorAll('.dropdown').forEach(drop =&gt; {
+                        if (drop !== parent) {
+                            drop.classList.remove('open');
+                        }
+                    });
+                }
+            });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+    </div>
+    <iframe id="preview-view"></iframe>
+</div>
+
+<script>
+function copyCode(btn) {
+    const code = document.getElementById("html-code").innerText;
+    navigator.clipboard.writeText(code).then(() => {
+        const oldHTML = btn.innerHTML;
+        btn.innerHTML = '<span style="color:#4caf50;font-weight:bold;">Copied!</span>';
+        setTimeout(() => { btn.innerHTML = oldHTML; }, 2000);
+    });
+}
+
+function toggleView(btn) {
+    const codeView = document.getElementById("code-view");
+    const previewView = document.getElementById("preview-view");
+
+    if (btn.innerText === "Lihat Source") {
+        btn.innerText = "Kembali";
+        codeView.style.display = "block";
+        previewView.style.display = "none";
+    } else {
+        btn.innerText = "Lihat Source";
+        codeView.style.display = "none";
+        previewView.style.display = "block";
+        previewView.srcdoc = document.getElementById("html-code").innerText;
+    }
+}
+
+document.getElementById("preview-view").srcdoc = document.getElementById("html-code").innerText;
+</script>
+
+</body>
+</html>
