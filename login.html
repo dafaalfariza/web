@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet hotspot - Log in</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            backdrop-filter: blur(5px);
+        }
+
+        .wrap {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            background: black;
+            color: white;
+            font-size: 16px;
+            box-shadow: 0 0 10px red, 0 0 20px blue, 0 0 30px green;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            box-shadow: 0 0 20px cyan, 0 0 30px magenta, 0 0 40px yellow;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="/md5.js"></script>
+    $(if chap-id)
+    <form name="sendin" action="$(link-login-only)" method="post" style="display:none">
+        <input type="hidden" name="username" />
+        <input type="hidden" name="password" />
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="true" />
+    </form>
+    <script>
+        function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+        }
+    </script>
+    $(endif)
+
+    <div class="main">
+        <div class="wrap">
+            <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                <input type="hidden" name="dst" value="$(link-orig)" />
+                <input type="hidden" name="popup" value="true" />
+
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174 42">
+                    <!-- Logo SVG tetap -->
+                </svg>
+
+                <p class="info $(if error)alert$(endif)">
+                    $(if error == "")Please log in to use the internet hotspot service $(if trial == 'yes')<br />
+                    Free trial available, <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">click here</a>.$(endif)$(endif)
+                    $(if error)$(error)$(endif)
+                </p>
+
+                <label>
+                    <input name="username" type="text" value="$(username)" placeholder="Username" />
+                </label>
+                <label>
+                    <input name="password" type="password" placeholder="Password" />
+                </label>
+                <input type="submit" value="Connect" />
+            </form>
+
+            <p class="info bt">Powered by MikroTik RouterOS</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

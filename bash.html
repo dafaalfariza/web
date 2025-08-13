@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bash Preview Responsive dengan Navbar dan Tombol di Kanan Atas HP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2 class="bash-heading">Contoh Bash HTML + Preview</h2>
+  <div class="bash-container">
+    <div class="bash-header">
+      <span class="bash-title">html</span>
+      <div class="buttons-wrapper">
+        <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy source code">
+          <i class="fa-solid fa-copy"></i>
+        </button>
+        <button class="toggle-btn" onclick="toggleView(this)">Source</button>
+      </div>
+    </div>
+    <div id="code-view" style="display:none;">
+      <pre id="html-code">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;ApayCoding&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="css/navbar.css"&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Exo+2&amp;display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;style&gt;
+    @import url('https://fonts.googleapi.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap');
+    /* CSS kamu di sini */
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;nav class="navbar"&gt;
+        &lt;div class="navbar-container"&gt;
+            &lt;a href="index.html" class="navbar-logo"&gt;&lt;img src="images/apaycoding_logo.png" alt="ApayCoding"&gt;&lt;/a&gt;
+            &lt;button class="navbar-toggle"&gt;
+                &lt;span class="bar"&gt;&lt;/span&gt;
+                &lt;span class="bar"&gt;&lt;/span&gt;
+                &lt;span class="bar"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;ul class="navbar-menu"&gt;
+                &lt;li&gt;&lt;a href="../index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown"&gt;
+                    &lt;a href="#" class="active"&gt;Materi&lt;/a&gt;
+                    &lt;ul class="dropdown-menu"&gt;
+                        &lt;li&gt;&lt;a href="kj.html"&gt;KJ&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="tjkn.html"&gt;TJKN&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;UI/UX Design&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;h1 class="neon-title"&gt;Keamanan Jaringan&lt;/h1&gt;
+    &lt;div class="full-box"&gt;
+
+    &lt;/div&gt;
+
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+    </div>
+    <iframe id="preview-view"></iframe>
+  </div>
+
+  <h2 class="bash-heading">Contoh Bash HTML Saja</h2>
+  <div class="bash-container">
+    <div class="bash-header">
+      <span class="bash-title">html</span>
+      <div class="buttons-wrapper">
+        <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy source code">
+          <i class="fa-solid fa-copy"></i>
+        </button>
+      </div>
+    </div>
+    <div id="code-view">
+      <pre id="html-only">&lt;h1&gt;Hello World&lt;/h1&gt;</pre> 
+    </div>
+  </div>
+
+  <h2 class="bash-heading">Contoh Bash CSS</h2>
+  <div class="bash-container">
+    <div class="bash-header">
+      <span class="bash-title">css</span>
+      <div class="buttons-wrapper">
+        <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy source code">
+          <i class="fa-solid fa-copy"></i>
+        </button>
+      </div>
+    </div>
+    <div id="code-view">
+      <pre id="css-only">body {
+  background: black;
+  color: white;
+}</pre>
+    </div>
+  </div>
+
+  <h2 class="bash-heading">Contoh Bash JavaScript</h2>
+  <div class="bash-container">
+    <div class="bash-header">
+      <span class="bash-title">js</span>
+      <div class="buttons-wrapper">
+        <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy source code">
+          <i class="fa-solid fa-copy"></i>
+        </button>
+      </div>
+    </div>
+    <div id="code-view">
+      <pre id="js-only">console.log("Hello World");</pre>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

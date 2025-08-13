@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ApayCoding Navbar dengan Multidropdown Responsive & Animasi</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Jost', serif;
+      background: #111;
+      color: #fff;
+    }
+
+    /* Navbar utama */
+    .navbar {
+      background: rgba(22, 37, 48, 0.9);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      padding: 0 2rem;
+    }
+
+    .navbar-container {
+      display: flex;
+      width: 100%;
+      max-width: 1200px;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0.5rem 0;
+    }
+
+    .navbar-logo img {
+      height: 50px;
+    }
+
+    /* Menu utama */
+    .navbar-menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-left: auto;
+    }
+
+    .navbar-menu > li {
+      position: relative;
+    }
+
+    .navbar-menu > li > a {
+      display: block;
+      padding: 0.7rem 1.3rem;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 20px;
+      border: 2px solid transparent;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+      font-weight: 500;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .navbar-menu > li > a:hover,
+    .navbar-menu > li > a.active {
+      background: rgba(188, 212, 229, 0.8);
+      color: #162530;
+      border-color: #fff;
+    }
+
+    /* Dropdown level 1 dan seterusnya */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(22, 37, 48, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      min-width: 200px;
+      list-style: none;
+      padding: 0.5rem 0;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      z-index: 999;
+
+      /* Animasi muncul */
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-15px);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dropdown-menu li {
+      position: relative;
+    }
+
+    /* Link dropdown level 1 dan seterusnya */
+    .dropdown-menu li a {
+      padding: 10px 20px;
+      display: block;
+      font-size: 1rem;
+      color: #fff;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      border-radius: 20px;
+      border: 2px solid transparent;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      user-select: none;
+    }
+
+    /* Hover dropdown links */
+    .dropdown-menu li a:hover {
+      background: rgba(188, 212, 229, 0.8);
+      color: #162530;
+      border-color: #fff;
+    }
+
+    /* Dropdown level 2 (submenu) */
+    .dropdown-menu .dropdown-menu {
+      top: 0;
+      left: 100%;
+      border-radius: 12px;
+      min-width: 180px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+
+      /* Animasi muncul */
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-15px);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background: rgba(22, 37, 48, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 0;
+      z-index: 999;
+    }
+
+    /* Show dropdown on hover desktop */
+    .navbar-menu > li:hover > .dropdown-menu,
+    .dropdown-menu li:hover > .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Tombol hamburger */
+    .navbar-toggle {
+      display: none;
+      background: transparent;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      margin-left: auto;
+      width: 40px;
+      height: 30px;
+      position: relative;
+      z-index: 1101;
+    }
+
+    .bar {
+      display: block;
+      height: 3px;
+      background: #fff;
+      margin: 5px auto;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      width: 15px;
+    }
+
+    .bar:nth-child(1),
+    .bar:nth-child(3) {
+      width: 25px;
+    }
+
+    .navbar-toggle:hover .bar:nth-child(1),
+    .navbar-toggle:hover .bar:nth-child(3),
+    .navbar-toggle.active .bar:nth-child(1),
+    .navbar-toggle.active .bar:nth-child(3) {
+      width: 35px;
+    }
+
+    .navbar-toggle:hover .bar:nth-child(2),
+    .navbar-toggle.active .bar:nth-child(2) {
+      width: 15px;
+      opacity: 0.7;
+    }
+
+    /* Responsive - mobile & tablet */
+    @media (max-width: 880px) {
+      .navbar-toggle {
+        display: block;
+      }
+
+      .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -260px;
+        height: 100vh;
+        width: 260px;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        gap: 0;
+        padding: 5rem 0 1rem 0;
+        transition: right 0.3s ease;
+        overflow-y: auto;
+        z-index: 1100;
+        margin-left: 0;
+      }
+
+      .navbar-menu.active {
+        right: 0;
+      }
+
+      .navbar-menu > li {
+        width: 100%;
+      }
+
+      .navbar-menu > li > a {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Dropdown mobile override */
+      .dropdown-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: none !important; /* default hidden, ditoggle via JS */
+        background: transparent !important;
+        padding-left: 1rem !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        min-width: auto !important;
+        transition: none !important;
+      }
+
+      .dropdown-menu.open {
+        display: flex !important;
+        flex-direction: column;
+      }
+
+      .dropdown-menu li a {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 0;
+        border: none;
+        color: #ddd;
+      }
+
+      .dropdown-menu li a:hover {
+        background: rgba(188, 212, 229, 0.15);
+        color: #eee;
+        border: none;
+      }
+
+      .dropdown-menu .dropdown-menu li a {
+        padding-left: 3rem;
+      }
+
+      /* Arrow for dropdown toggles */
+      .dropdown > a::after {
+        content: " ▼";
+        float: right;
+        font-size: 0.7rem;
+        margin-left: 0.5rem;
+        user-select: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-logo" aria-label="ApayCoding Home"><img src="../images/apaycoding_logo.png" alt="ApayCoding Logo" /></a>
+      <button class="navbar-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="navbar-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Materi</a>
+          <ul class="dropdown-menu" aria-label="submenu Materi">
+            <li><a href="kj.html">KJ</a></li>
+            <li class="dropdown">
+              <a href="#" aria-haspopup="true" aria-expanded="false">TJKN</a>
+              <ul class="dropdown-menu" aria-label="submenu TJKN">
+                <li><a href="#">TJKN Sub 1</a></li>
+                <li><a href="#">TJKN Sub 2</a></li>
+                <li><a href="#">TJKN Sub 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">UI/UX Design</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+
+    // Toggle menu hamburger
+    navbarToggle.addEventListener('click', () => {
+      const expanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+      navbarToggle.setAttribute('aria-expanded', !expanded);
+      navbarToggle.classList.toggle('active');
+      navbarMenu.classList.toggle('active');
+    });
+
+    // Toggle dropdown submenu di mobile/tablet (klik) untuk semua dropdown level
+    const dropdownToggles = document.querySelectorAll('.navbar-menu .dropdown > a');
+
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', e => {
+        if (window.innerWidth <= 880) {
+          e.preventDefault();
+
+          const parentLi = toggle.parentElement;
+          const submenu = parentLi.querySelector('.dropdown-menu');
+
+          if (!submenu) return;
+
+          const isOpen = submenu.classList.contains('open');
+
+          // Tutup semua submenu lain kecuali submenu ini dan anak-anaknya
+          closeAllSubmenusExcept(submenu);
+
+          if (isOpen) {
+            submenu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          } else {
+            submenu.classList.add('open');
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        }
+      });
+    });
+
+    // Fungsi tutup submenu kecuali submenu yang diklik
+    function closeAllSubmenusExcept(exceptSubmenu) {
+      const allSubmenus = document.querySelectorAll('.dropdown-menu.open');
+      allSubmenus.forEach(sm => {
+        if (sm !== exceptSubmenu) {
+          sm.classList.remove('open');
+          // Reset aria-expanded untuk parent toggles
+          const parentLink = sm.parentElement.querySelector('a');
+          if (parentLink) {
+            parentLink.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+    }
+
+    // Tutup menu saat klik di luar navbar (mobile)
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 880) {
+        if (!navbarMenu.contains(e.target) && !navbarToggle.contains(e.target)) {
+          navbarMenu.classList.remove('active');
+          navbarToggle.classList.remove('active');
+          navbarToggle.setAttribute('aria-expanded', 'false');
+
+          // Tutup semua submenu
+          closeAllSubmenusExcept(null);
+        }
+      }
+    });
+
+    // Reset menu & submenu saat resize window
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 880) {
+        navbarMenu.classList.remove('active');
+        navbarToggle.classList.remove('active');
+        navbarToggle.setAttribute('aria-expanded', 'false');
+        closeAllSubmenusExcept(null);
+      }
+    });
+  </script>
+</body>
+
+</html>

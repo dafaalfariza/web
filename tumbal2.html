@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navbar with Animated Underline</title>
+  <style>
+    /* Variabel warna */
+    :root {
+      --white-color: #fff;
+      --black-color: hsl(220, 24%, 12%);
+      --black-color-light: hsl(220, 24%, 15%);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--black-color);
+      color: var(--white-color);
+    }
+
+    /* Navbar container */
+    nav {
+      background-color: var(--black-color);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    /* Semua link navbar dan dropdown */
+    .nav__link,
+    .dropdown__link,
+    .dropdown__sublink {
+      position: relative;
+      color: var(--white-color);
+      text-decoration: none;
+      padding-bottom: 4px; /* ruang untuk underline */
+      cursor: pointer;
+      transition: color 0.3s;
+      font-weight: 600;
+    }
+
+    /* Animasi underline awal */
+    .nav__link::after,
+    .dropdown__link::after,
+    .dropdown__sublink::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+
+    /* Animasi saat hover */
+    .nav__link:hover::after,
+    .dropdown__link:hover::after,
+    .dropdown__sublink:hover::after {
+      width: 100%;
+    }
+
+    /* Contoh dropdown menu styling */
+    .dropdown__menu {
+      display: none;
+      position: absolute;
+      background-color: var(--black-color-light);
+      margin-top: 0.5rem;
+      padding: 0.5rem 0;
+      border-radius: 4px;
+      min-width: 150px;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown__item:hover > .dropdown__menu {
+      display: block;
+    }
+
+    /* Dropdown items */
+    .dropdown__link, .dropdown__sublink {
+      display: block;
+      padding: 0.5rem 1rem;
+    }
+
+    /* Positioning dropdown container */
+    .dropdown__item {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="nav__link">Home</a>
+    <a href="#" class="nav__link">Company</a>
+
+    <div class="dropdown__item">
+      <div class="nav__link">Analytics</div>
+      <div class="dropdown__menu">
+        <a href="#" class="dropdown__link">Overview</a>
+        <a href="#" class="dropdown__link">Transactions</a>
+        <div class="dropdown__item">
+          <div class="dropdown__link">Reports</div>
+          <div class="dropdown__menu">
+            <a href="#" class="dropdown__sublink">Documents</a>
+            <a href="#" class="dropdown__sublink">Payments</a>
+            <a href="#" class="dropdown__sublink">Refunds</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="nav__link">Products</a>
+
+    <div class="dropdown__item">
+      <div class="nav__link">Users</div>
+      <div class="dropdown__menu">
+        <a href="#" class="dropdown__link">Profiles</a>
+        <a href="#" class="dropdown__link">Accounts</a>
+        <a href="#" class="dropdown__link">Messages</a>
+      </div>
+    </div>
+
+    <a href="#" class="nav__link">Contact</a>
+  </nav>
+</body>
+</html>

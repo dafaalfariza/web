@@ -1,0 +1,132 @@
+body {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: monospace;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  gap: 20px;
+}
+
+h2.bash-heading {
+  color: #4caf50;
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  text-align: left;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.bash-container {
+  background-color: #2d2d2d;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  resize: both;
+  overflow: auto;
+  min-width: 320px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+#code-view, #preview-view {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+pre, iframe {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 14px;
+  overflow: auto;
+  box-sizing: border-box;
+  border-radius: 0 0 5px 5px;
+}
+
+.bash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b1b1b;
+  padding: 8px 12px;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+
+.bash-title {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.copy-btn, .toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.copy-btn:hover, .toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 📱 Tampilan HP */
+@media (max-width: 480px) {
+  .bash-container {
+    min-width: 280px;
+    min-height: 800px; /* lebih panjang */
+    width: 100%;
+    height: auto;
+    resize: vertical;
+  }
+  #preview-view {
+    min-height: 750px; /* iframe preview ikut panjang */
+  }
+}
+
+.bash-header {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 12px 38px;
+}
+
+.buttons-wrapper {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.copy-btn, .toggle-btn {
+  font-size: 13px;
+  padding: 4px 8px;
+}
+
+pre, iframe {
+  font-size: 12.5px;
+  max-height: none;
+  line-height: 1.4em;
+}
