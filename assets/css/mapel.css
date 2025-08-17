@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden; /* cegah scroll ke kanan */
@@ -9,7 +14,17 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 80px;
+    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* biar gak bikin jarak aneh */
+}
+
 
 h1 {
     font-family: 'Orbitron', sans-serif;
@@ -145,6 +160,7 @@ h2.sub {
 
 .full-box {
     width: 100%;
+    margin: 0 auto;
     max-width: 100%;
     background-color: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
@@ -156,6 +172,7 @@ h2.sub {
     color: white;
     opacity: 0;
     animation: fadeIn 2s ease forwards;
+    box-sizing: border-box;
 }
 
 
