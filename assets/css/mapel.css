@@ -452,9 +452,12 @@ caption {
 }
 
 @media (max-width: 420px) {
+p {
+    font-size: 0.9em;
+}
 
     table {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         /* lebih kecil lagi */
     }
 
@@ -480,13 +483,35 @@ caption {
     }
 
     p,
-    .p
-    .full-box .p.mobile,
-    .full-box .p {
-        font-size: 1em;
+    .full-box p,
+    .full-box ol li p, 
+    .full-box ol.angka li p,
+    .full-box ol.angka p,
+    .full-box ol.romawi li p,
+    .full-box ol.romawi p,
+    .full-box ul li p,
+    .full-box ul li.bullet p,
+    .full-box ul.circle li p,
+    .full-box ul.circle li.bullet p,
+    .full-box ol.angka li,
+    .full-box ol.angka ul li.bullet ul.circle li p {
+        font-size: 1.1rem;
         text-align: justify;
         text-align-last: left;
         word-spacing: normal;
+    }
+
+    .full-box ul.circle li p.mobile {
+        font-size: 0.9em;
+    }
+
+    .full-box p,
+    .full-box p.mobile {
+        font-size: 0.9em;
+    }
+
+    .p.mobile {
+        font-size: 0.9em;
     }
 
     .full-box img {
