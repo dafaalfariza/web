@@ -452,6 +452,10 @@ caption {
 }
 
 @media (max-width: 420px) {
+p {
+    font-size: 0.9em;
+}
+
     table {
         font-size: 0.8rem;
         /* lebih kecil lagi */
@@ -480,7 +484,16 @@ caption {
 
     p,
     .full-box p,
-    .full-box ol li p {
+    .full-box ol li p, 
+    .full-box ol.angka li p,
+    .full-box ol.angka p,
+    .full-box ol.romawi li p,
+    .full-box ol.romawi p,
+    .full-box ul li p,
+    .full-box ul li.bullet p,
+    .full-box ul.circle li p,
+    .full-box ul.circle li.bullet p,
+    .full-box ol.angka li {
         font-size: 1.1em;
         text-align: justify;
         text-align-last: left;
