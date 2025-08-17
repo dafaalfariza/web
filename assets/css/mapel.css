@@ -495,7 +495,7 @@ p {
     .full-box ul.circle li.bullet p,
     .full-box ol.angka li,
     .full-box ol.angka ul li.bullet ul.circle li p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-align: justify;
         text-align-last: left;
         word-spacing: normal;
