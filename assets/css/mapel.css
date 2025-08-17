@@ -1,3 +1,9 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* cegah scroll ke kanan */
+}
+
+
 body {
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -272,11 +278,13 @@ h2.sub {
 }
 
 table {
-    width: 70%;
+    width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
     /* supaya garis tabel jadi 1 */
     margin: 20px auto;
     font-family: Arial, sans-serif;
+    word-wrap: break-word;
 }
 
 th,
@@ -286,6 +294,7 @@ td {
     padding: 10px;
     text-align: center;
     color: white;
+    font-size: 0.9rem;
 }
 
 th {
