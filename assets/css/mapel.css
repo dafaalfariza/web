@@ -483,6 +483,7 @@ p {
     }
 
     p,
+    .p
     .full-box p,
     .full-box ol li p, 
     .full-box ol.angka li p,
@@ -499,6 +500,10 @@ p {
         text-align: justify;
         text-align-last: left;
         word-spacing: normal;
+    }
+
+    .full-box ol.angka ul li.bullet ul.circle li p {
+        width: 100%;
     }
 
     .full-box ul.circle li p.mobile {
