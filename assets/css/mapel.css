@@ -341,7 +341,7 @@ caption {
 
 @media (max-width: 768px) {
     table {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         /* kecilin font */
     }
 
@@ -381,9 +381,14 @@ caption {
         text-align: center;
     }
 
+    p,
+    .p
+    .p.mobile
     .full-box p,
+    .full-box .p,
+    .full-box .p.mobile,
     ol li p {
-        font-size: 0.9em;
+        font-size: 1.2em;
         text-align: justify;
     }
 
@@ -454,7 +459,7 @@ caption {
 @media (max-width: 420px) {
 
     table {
-        font-size: 0.9rem;
+        font-size: 1rem;
         /* lebih kecil lagi */
     }
 
