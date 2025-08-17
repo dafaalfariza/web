@@ -1,24 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+   <!--=============== CSS ===============-->
+   <link rel="shortcut icon" href="assets/images/apaycoding_logo_copy.png" type="image/x-icon">
+   <link rel="stylesheet" href="styles.css">
+
+   <title>ApayCoding</title>
+</head>
+<style>
+    body {
+        background-image: url(assets/images/dark-background-web.png); /* Pindahkan background ke CSS utama */
+    }
+</style>
+<body>
+
+   <!--=============== HEADER ===============-->
+   <header class="header">
+      <nav class="nav container">
+         <div class="nav__data">
+            <a href="#" class="nav__logo">
+               <a href="index.html" class="navbar-logo"><img src="assets/images/apaycoding_logo_copy.png"
+                     alt="">ApayCoding</a>
+            </a>
+
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line nav__burger"></i>
+               <i class="ri-close-line nav__close"></i>
+            </div>
+         </div>
+
+         <!--=============== NAV MENU ===============-->
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li><a href="#" class="nav__link">Home</a></li>
+
+               <li><a href="#" class="nav__link">Company</a></li>
+
+               <!--=============== DROPDOWN 1 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Materi <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     
+
+                     <!--=============== DROPDOWN SUBMENU ===============-->
+                     <li class="dropdown__subitem">
+                        <div class="dropdown__link">
+                           <i class="ri-bar-chart-line"></i> Produktif <i class="ri-add-line dropdown__add"></i>
+                        </div>
+
+                        <ul class="dropdown__submenu">
+                           <li>
+                              <a href="assets/pages/kj.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i> KJ
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="assets/pages/tjkn.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i> TJKN
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="assets/pages/pkk.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i> PKK
+                              </a>
+                           </li>
+                           <li>
+                              <a href="assets/pages/pj.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i>PJ
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+
+               <li><a href="#" class="nav__link">Products</a></li>
+
+               <!--=============== DROPDOWN 2 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-user-line"></i> Discord Server's
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-lock-line"></i> Accounts
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-message-3-line"></i> Messages
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+               <li><a href="#" class="nav__link">Contact</a></li>
+
+               <!--=============== DROPDOWN 3 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-discord-fill"></i> Discord Server's
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-github-fill"></i> GitHub
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-instagram-fill"></i> Instagram
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+            </ul>
+         </div>
+      </nav>
+   </header>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="main.js"></script>
+</body>
+
+</html>
+
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
+
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: #79ff98;
   --black-color: hsl(220, 24%, 12%);
   --black-color-light: hsl(220, 24%, 15%);
   --black-color-lighten: hsl(220, 20%, 18%);
   --white-color: #fff;
   --body-color: hsl(220, 100%, 97%);
+
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat", sans-serif;
   --normal-font-size: .938rem;
+
   /*========== Font weight ==========*/
   --font-regular: 400;
   --font-semi-bold: 600;
+
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
@@ -38,10 +198,8 @@
   margin: 0;
 }
 
-html,
-body {
-  height: 100%;
-  /* Pastikan html dan body mengisi seluruh tinggi viewport */
+html, body {
+  height: 100%; /* Pastikan html dan body mengisi seluruh tinggi viewport */
   margin: 0;
   padding: 0;
 }
@@ -54,6 +212,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 
 ul {
   list-style: none;
@@ -291,16 +450,21 @@ a {
   }
 }
 
+
 /* For large devices */
 @media screen and (min-width: 1118px) {
   .container {
-    margin-inline: auto;
+    margin-inline: 0;       /* hilangkan auto center */
+    padding-left: 2rem;     /* beri jarak kiri */
+    padding-right: 2rem;    /* beri jarak kanan */
+    width: 100%;            /* biar full lebar */
   }
 
   .nav {
     height: calc(var(--header-height) + 2rem);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* logo kiri, menu kanan */
+    align-items: center;            /* vertical center */
   }
 
   .nav__toggle {
@@ -310,7 +474,13 @@ a {
   .nav__list {
     height: 100%;
     display: flex;
+  gap: 2rem; /* jarak antar menu */
     column-gap: 3rem;
+    margin-left: auto;
+  }
+
+  .nav__data {
+    margin-right: auto;
   }
 
   .nav__link {
@@ -357,6 +527,8 @@ a {
   }
 
   /* Show dropdown menu */
+
+  
   .dropdown__item:hover .dropdown__menu {
     opacity: 1;
     top: 5.5rem;
@@ -413,30 +585,29 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .nav__toggle {
-    display: block;
-    margin-right: 10px;
-    /* geser dari tepi kanan */
-  }
+    .nav__toggle {
+        display: block;
+        margin-right: 10px; /* geser dari tepi kanan */
+    }
+    .nav__menu {
+        display: none;
+    }
+    .nav__menu.show-menu {
+        display: block; /* Tambahkan ini supaya menu muncul */
+    }
 
-  .nav__menu {
-    display: none;
-  }
-
-  .nav__menu.show-menu {
-    display: block;
-    /* Tambahkan ini supaya menu muncul */
-  }
+    
 }
 
 /* Tambahan untuk laptop/desktop */
 @media screen and (min-width: 1024px) {
   .container {
-    max-width: 1200px;
-    /* atau sesuai kebutuhan */
-    padding-left: 2rem;
-    /* tambah jarak kiri */
-    padding-right: 2rem;
-    /* tambah jarak kanan */
+    max-width: 1200px; /* atau sesuai kebutuhan */
+    padding-left: 2rem;  /* tambah jarak kiri */
+    padding-right: 2rem; /* tambah jarak kanan */
   }
+
+  .navbar-logo {
+  margin-left: 1rem; /* geser logo sedikit */
+}
 }

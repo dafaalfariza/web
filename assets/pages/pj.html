@@ -6,33 +6,35 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
    <!--=============== CSS ===============-->
    <link rel="shortcut icon" href="../images/apaycoding_logo_copy.png" type="image/x-icon">
    <link rel="stylesheet" href="../../styles.css">
    <link rel="stylesheet" href="../css/mapel.css">
-   
+
    <!-- Fonts -->
    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2&display=swap" rel="stylesheet">
 
-   <title>ApayCoding</title>
+   <title>Pengalamatan Jaringan - OSI Layer</title>
 </head>
 <style>
-    body {
-        background-image: url(../images/dark-background-web.png); /* Pindahkan background ke CSS utama */
-    }
+   body {
+      background-image: url(../images/dark-background-web.png);
+      /* Pindahkan background ke CSS utama */
+   }
 </style>
+
 <body>
 
    <!--=============== HEADER ===============-->
    <header class="header">
       <nav class="nav container">
          <div class="nav__data">
-            <a href="../../styles.css" class="nav__logo">
-               <a href="../css/mapel.css" class="navbar-logo"><img src="../images/apaycoding_logo_copy.png"
-                     alt="">ApayCoding</a>
+            <a href="../../index.html" class="nav__logo">
+               <a href=".././index.html" class="navbar-logo"><img src="../images/apaycoding_logo_copy.png" alt="">IpayyCoding</a>
             </a>
 
             <div class="nav__toggle" id="nav-toggle">
@@ -44,9 +46,9 @@
          <!--=============== NAV MENU ===============-->
          <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
-               <li><a href="#" class="nav__link">Home</a></li>
+               <li><a href="../../index.html" class="nav__link">Home</a></li>
 
-               <li><a href="#" class="nav__link">Company</a></li>
+               <li><a href="../pages/updates.html" class="nav__link">Updates</a></li>
 
                <!--=============== DROPDOWN 1 ===============-->
                <li class="dropdown__item">
@@ -60,7 +62,7 @@
                      <!--=============== DROPDOWN SUBMENU ===============-->
                      <li class="dropdown__subitem">
                         <div class="dropdown__link">
-                           <i class="ri-bar-chart-line"></i> Produktif <i class="ri-add-line dropdown__add"></i>
+                           <i class="ri-award-line"></i> Produktif <i class="ri-add-line dropdown__add"></i>
                         </div>
 
                         <ul class="dropdown__submenu">
@@ -82,100 +84,531 @@
                               </a>
                            </li>
                            <li>
-                            <a href="pj.html" class="dropdown__sublink">
-                                <i class="ri-book-read-line"></i> PJ
-                            </a>
+                              <a href="pj.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i>PJ
+                              </a>
                            </li>
                         </ul>
                      </li>
                   </ul>
                </li>
 
-               <li><a href="#" class="nav__link">Products</a></li>
-
+               
                <!--=============== DROPDOWN 2 ===============-->
                <li class="dropdown__item">
                   <div class="nav__link">
-                     Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     Source Code <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                   </div>
 
                   <ul class="dropdown__menu">
                      <li>
                         <a href="#" class="dropdown__link">
-                           <i class="ri-user-line"></i> Profiles
+                           <i class="ri-code-line"></i> Navbar
                         </a>
                      </li>
 
                      <li>
                         <a href="#" class="dropdown__link">
-                           <i class="ri-lock-line"></i> Accounts
+                           <i class="ri-code-line"></i> Parallax
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+               <!--=============== DROPDOWN 3 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Our Social <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="https://discord.gg/Gu3qRvqv" target="_blank" class="dropdown__link">
+                           <i class="ri-discord-fill"></i> Discord Server's
                         </a>
                      </li>
 
                      <li>
-                        <a href="#" class="dropdown__link">
-                           <i class="ri-message-3-line"></i> Messages
+                        <a href="https://github.com/dafaalfariza" target="_blank" class="dropdown__link">
+                           <i class="ri-github-fill"></i> GitHub
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="https://www.instagram.com/sajowataru_/" target="_blank" class="dropdown__link">
+                           <i class="ri-instagram-fill"></i> Instagram
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="https://x.com/CallMeDaff7" target="_blank" class="dropdown__link">
+                           <i class="ri-twitter-x-line"></i> Twitter
                         </a>
                      </li>
                   </ul>
                </li>
 
                <li><a href="#" class="nav__link">Contact</a></li>
+
             </ul>
          </div>
       </nav>
    </header>
    <!-- Materi -->
-    <h1 class="neon-title">OSI LAYER dan TCP/IP</h1>
-    <div class="full-box">
-        <p>
-            Source : <a href="https://gerbangdesa.com/mengenal-osi-model-dan-tcp-ipmodel-pada-jaringan/" target="_blank" rel="noopener noreferrer">gerbangdesa.com/mengenal-osi-model-dan-tcp-ipmodel-pada-jaringan/</a>
-        </p>
+   <h1 class="neon-title">OSI LAYER dan TCP/IP</h1>
+   <div class="full-box">
 
-        <ol type="A">
-            <li>
-                Tujuan Pembelajaran
-                <p>Setelah mempelajari modul ini, peserta didik diharapkan dapat:</p>
-                <ol class="angka">
-                    <li>
-                        <p>Menjelaskan pengertian model OSI dan TCP/IP.</p>
-                    </li>
-                    <li>
-                        <p>Menyebutkan dan menjelaskan masing-masing lapisan pada model OSI dan TCP/IP.</p>
-                    </li>
-                    <li>
-                        <p>Mengidentifikasi perbedaan antara model OSI dan TCP/IP.</p>
-                    </li>
-                    <li>
-                        <p>Memberikan contoh protokol yang digunakan dalam masing-masing model.</p>
-                    </li>
-                    <li>
-                        <p>Mengilustrasikan proses komunikasi data berdasarkan model OSI dan TCP/IP.</p>
-                    </li>
-                </ol>
-                <br>
-                <li>
-                    Gambar TCP/IP MODEL dan OSI MODEL
-                    <img src="../images/modul/image.png" alt="OSI LAYER dan TCP/IP" class="img-clickable">
-                </li>
-                <br>
-                <br>
+        <!-- Page 1 -->
+      <p>
+         Source : <a href="https://gerbangdesa.com/mengenal-osi-model-dan-tcp-ipmodel-pada-jaringan/" target="_blank"
+            rel="noopener noreferrer">gerbangdesa.com/mengenal-osi-model-dan-tcp-ipmodel-pada-jaringan/</a>
+      </p>
 
-                <p></p>
+      <ol type="A">
+         <li>
+            Tujuan Pembelajaran
+            <p>Setelah mempelajari modul ini, peserta didik diharapkan dapat:</p>
+            <ol class="angka">
+               <li>
+                  <p>Menjelaskan pengertian model OSI dan TCP/IP.</p>
+               </li>
+               <li>
+                  <p>Menyebutkan dan menjelaskan masing-masing lapisan pada model OSI dan TCP/IP.</p>
+               </li>
+               <li>
+                  <p>Mengidentifikasi perbedaan antara model OSI dan TCP/IP.</p>
+               </li>
+               <li>
+                  <p>Memberikan contoh protokol yang digunakan dalam masing-masing model.</p>
+               </li>
+               <li>
+                  <p>Mengilustrasikan proses komunikasi data berdasarkan model OSI dan TCP/IP.</p>
+               </li>
+            </ol>
+            <br>
+         <li>
+            Gambar TCP/IP MODEL dan OSI MODEL
+            <img src="../images/modul/image.png" alt="OSI LAYER dan TCP/IP" class="img-clickable">
+            <p>Gambar Perbedaan OSI Model dan TCP/IP Model</p>
+         </li>
+         <br>
+         <br>
+
+         <p>Dalam jaringan komputer, terdapat 2 model utama yang menjadi standar agar masing-masing perangkat komputer
+            dapat saling terhubung. Model pada jaringan komputer yang menjadi standar agar komunikasi antar perangkat
+            dapat berjalan dengan baik adalah <b>OSI Model dan TCP/IP.</b></p>
+         <br>
+         <br>
+         </li>
+      
+
+      <ol class="angka">
+         <li>
+            Pengertian OSI Model
+            <p>
+               OSI singkatan dari <b>Open System Interconnection</b> adalah model referensi yang menggambarkan bagaimana
+               informasi dari aplikasi perangkat lunak di satu komputer bergerak melalui media fisik ke aplikasi
+               perangkat lunak di komputer lain. OSI model mencirikan fungsi komputasi menjadi seperangkat aturan dan
+               persyaratan universal untuk mendukung introperabilitas antara produk dan perangkat lunak yang berbeda.
+            </p>
+            <p>
+               Dalam bahasa yang lebih sederhana, OSI Model menyediakan standar <b>untuk sistem komputer yang berbeda
+                  untuk dapat berkomunikasi satu sama lain.</b>
+            </p>
+            <p>
+               OSI Model dikembangkan oleh International Organization for Standardization (ISO) pada tahun 1984, dan
+               sekarang dianggap sebagai model arsitektur untuk komunikasi antar komputer.
+            </p>
+            <p>
+               OSI Model membagi seluruh tugas menjadi tujuh tugas yang lebih kecil agar mudah dikelola. Ketujuh tugas
+               tersebut diperankan oleh 7 lapisan (layer), sehingga masing-masing lapisan akan bertanggungjawab pada
+               satu tugas tertentu dengan tetap menjalin komunikasi dengan lapisan di atasnya dan di bawahnya.
+            </p>
+            <p>
+               Setiap layer bersifat mandiri, sehingga tugas yang diberikan ke setiap lapisan dapat dilakukan secara
+               independen.
+            </p>
+            <br>
+         </li>
+      </ol>
+
+      <ol type="a">
+         <li>
+            Karakteristik OSI Model
+            <p>
+               Model OSI dibagi menjadi dau lapisan: <b>lapisan atas (upper layer)</b>dan <b>lapisan bawah (lower
+                  layer).</b>
+            </p>
+            <p>
+               Lapisan atau OSI model umumnya beerhubungan dengan masalah terkait aplikasi, dan hanya
+               diimplementasikan dalam perangkat lunak.
+            </p>
+            <p>
+               Lapisan aplikasi paling dekat dengan pengguna akhir. Baik pengguna akhir dan lapisan aplikasi
+               berinteraksi dengan aplikasi perangkat lunak. Lapisan atas mengacu pada lapisan tepat di atas
+               lapisan lain.
+            </p>
+            <p>
+               Lapisan bawah Model OSI menangani maslaah transportasi data. Data link layer dan physical layer
+               diimplementasikan dalam perangkat keras dan perangkat lunak.
+            </p>
+            <p>
+               Physical layer adalah lapisan terendah dari model OSI dan paling dekat dengan <b>media fisik</b>.
+               Lapisan ini bertanggung jawab untuk menempatkan informasi pada media fisik.
+            </p>
+         </li>
+         <li>
+            Lapisan-lapisan pada OSI Model
+            <p>
+               OSI Model terbagi atas 7 lapisan. Setiap lapisan memiliki fungsi yang berbeda. Ketujuh lapisan
+               tersebut diurutkan dari bawah ke atas sebagai berikut:
+            </p>
+         </li>
+      </ol>
+      <ol class="angka">
+         <li>
+            <p>Physical Layer</p>
+         </li>
+         <li>
+            <p>Data-Link Layer</p>
+         </li>
+         <li>
+            <p>Network Layer</p>
+         </li>
+         <li>
+            <p>Transport Layer</p>
+         </li>
+         <li>
+            <p>Session Layer</p>
+         </li>
+         <li>
+            <p>Presentation Layer</p>
+         </li>
+         <li>
+            <p>Application Layer</p>
+         </li>
+         <img src="../images/modul/image2.png" alt="Lapisan-lapisan pada OSI Model" class="img-clickable">
+      </ol>
+
+      <br>
+      <br>
+
+      <ol class="angka">
+         <li class="sub2">
+            Physical layer
+            <p>Lapisan paling bawah dari model OSI adalah Physical layer.</p>
+            <img src="../images/modul/image3.png" alt="The Physical Layer" class="img-clickable">
+            <p>
+               Lapisan ini berisi informasi dalam bentuk bit dan bertanggung jawab untuk mentransmisikan bit satuan dari
+               satu node ke node berikutnya.
+            </p>
+            <p>
+               Saat menerima data, lapisan ini akan menerima sinyal dan mengubahnya menjadi 0 dan 1 kemudian
+               mengirimkannya ke Data Link Layer, yang bertugas menyatukan kembali menjadi frame.
+            </p>
+            <p>
+               Fungsi dari Physical layer adalah sebagai berikut:
+            </p>
+            <ul>
+               <li class="bullet">
+                  <p><b>Sinkronisasi bit:</b> Physical layer menyediakan sinkronisasi bit dengan menyediakan jam. Jam
+                     ini mengontrol pengirim dan penerima sehingga memberikan sinkronisasi pada tingkat bit.</p>
+               </li>
+               <li class="bullet">
+                  <p><b>Kontrol laju bit:</b> Lapisan physical layer juga mendefinisikan laju transmisi, yaitu jumlah
+                     bit yang dikirim per detik.</p>
+               </li>
+               <li class="bullet">
+                  <p><b>Topologi fisik:</b> Physical layer juga mendefiinisikan cara di mana perangkat/node yang berada
+                     diatur dalam jaringan yaitu topologi bus, star, atau mesh.</p>
+               </li>
+               <li class="bullet">
+                  <p><b>Mode transmisi:</b> Physical layer juga mendefinisikan cara data mengalir di antara dua
+                     perangkat yang terhubung. Berbagai mode transmisi di antaranya Simplex, half-duplex dan
+                     full-duplex.</p>
+               </li>
+            </ul>
+         <li class="sub2">
+            Data-Link Layer
+            <p>
+               Data-Link Layer bertanggung jawab atas pengiriman pesan dari node ke node. Fungsi utama dari lapisan ini
+               adalah untuk memastikan trasnfer data bebas dari kesalahan dari satu node ke yang lain, melalui Physical
+               Layer.
+            </p>
+            <img src="../images/modul/image4.png" alt="Data-Link Layer" class="img-clickable">
+            <p>
+               Ketika sebuah paket tiba di jaringan, maka menjadi tanggung jawab Data-Link Layer untuk mengirimkannya ke
+               Host menggunakan alamat MAC-nya.
+            </p>
+            <p>
+               Lapisan data link meliputi dua sub-lapisan tersendiri. Yang pertama, Media Access Control (MAC),
+               menyediakan kendali aliran dan multiplexing untuk transmisi perangkat melalui jaringan. Yang kedua,
+               Logical Link Control (LLC), menyediakan kontrol aliran dan kesalahan atas media fisik serta
+               mengidentifikaasi protokol jalur.
+            </p>
+            <p>
+               Paket yang diterima dari Network layer dibagi lagi menjadi frame berdasarkan ukuran frame NIC (Network
+               Interface Card). Lapisan ini juga merangkum alamat MAC pengirim dan penerima di header.
+            </p>
+            <p>
+               Alamat MAC Penerima diperoleh dengan menempatkan permintaan ARP (Address Resolution Protocol) untuk
+               menanyakan siapa pemilik IP tersebut dan host tujuan akan membalas dengan alamat MAC-nya.
+            </p>
+            <p>
+               Adapun fungsi dari Data Link Layer adalah sebagai berikut:
+            </p>
+            <ol class="angka">
+               <li class="sub2">
+                  <p><b>Framing:</b> Framing adalah fungsi dari lapisan Data link. Lapisan Data-link menyediakan cara
+                     bagi pengirim untuk mengirimkan satu set bit yang berguna bagi penerima. Informasi dapat dicapai
+                     dengan melampirkan pola bit khusus ke awal dan akhir frame.</p>
+               </li>
+               <li class="sub2">
+                  <p><b>Pengalamatan fisik:</b> Setelah membuat rame, lapisan Data-link menambahkan alamat fisik (alamat
+                     MAC) pengirim dan/atau penerima di header setiap frame data.</p>
+               </li>
+               <li class="sub2">
+                  <p><b>Kontrol kesalahan:</b> Lapisan Data-link menyediakan mekanisme kontrol kesalahan yang mendeteksi
+                     dan mentransmisi ulang frame yang rusak atau hilang.</p>
+               </li>
+               <li class="sub2">
+                  <p><b>Kendali aliran data:</b> Kecepatan data harus konstan di kedua sisi. Jika tidak, data mungkin
+                     rusak sehingga kontrol aliran mengoordinasikan jumlah data yang dapat dikirim sebelum menerima
+                     pengakuan.</p>
+               </li>
+               <li class="sub2">
+                  <p><b>Kontrol akses:</b> Ketika satu saluran komunikasi digunakan bersama oleh beberapa perangkat,
+                     sub-lapisan MAC dari lapisan data-link membantu menentukan pperangkaat mana yang memiliki kendali
+                     atas saluran akses pada waktu tertentu.</p>
+               </li>
+            </ol>
+         <li class="sub2">
+            Network Layer
+            <img src="../images/modul/image5.png" alt="Network Layer" class="img-clickable">
+         </li>
+         <p>
+            Network layer berfungsi untuk transmisi data dari satu host ke host lain yang terletak di jaringan yang
+            berbeda.
+         </p>
+         <p>
+            Lapisan ini juga menangani perutean paket yaitu pemilihan jalur terpendek untuk mengirimkan paket dari
+            jumlah rute yang tersedia. Alamat IP pengirim & penerima ditempatkan di header oleh Network layer.
+         </p>
+         <p>
+            Fungsi dari lapisan Network adalah:
+         </p>
+         <ul>
+            <li class="bullet">
+               <p>
+                  <b>Routing:</b> Protokol lapisan Network menentukan rute mana yang cocok dari sumber ke tujuan. Fungsi
+                  lapisan Network ini dikenal sebagai <b>routing.</b>
+               </p>
             </li>
-        </ol>
-    </div>
+            <li class="bullet">
+               <p>
+                  <b>Logical Addressing:</b> Untuk mengidentifikasi setiap perangkat di internetwork secara unik,
+                  INetwork layer mendefinisikan skema pengalamatan. Alamat IP pengirim & penerima ditempatkan di header.
+                  Alamat seperti itu membedakan setiap perangkat secara unik dan universal.
+               </p>
+            </li>
+         </ul>
+         
+         <li class="sub2">
+            Transport Layer
+            <img src="../images/modul/image6.png" alt="Transport Layer" class="img-clickable">
+            <p>
+               Transport layer menyediakan layanan ke Application layer dan mengambil layanan dari Network Layer Data di
+               lapisan transport disebut sebagai <b>segmen.</b>
+            </p>
+            <p>
+               Lapisan ini bertanggung jawab atas pengiriman pesan secara end to end. Lapisan transport juga memberikan
+               pengakuan atas transmisi data yang berhasil dan mentransmisikan ulang data jika ditemukan kesalahan.
+            </p>
+            <p>
+               Di sisi pengirim, lapisan transport menerima data yang diformat dari lapisan atas, melakukan segmentasi,
+               dan juga menerapkan kontrol aliran dan kesalahan untuk memastikan transmisi data yang tepat. Selain itu
+               juga lapisan transport menambahkan nomor port sumber dan tujuan di headernya dan meneruskan data yang
+               tersegmentasi ke Network layer.
+            </p>
+            <br>
+            <br>
+            <p>
+               Umumnya, nomor port tujuan ini dikonfigurasi, baik secara default ataupun manual. Misalnya, ketika
+               aplikasi web membuat permintaan ke server web, biasanya menggunakan nomor port 80, karena ini adalah port
+               default yang ditetapkan untuk aplikasi web. Banyak aplikasi memiliki port default yang ditetapkan.
+            </p>
+            <p>
+               Di sisi penerima, lapisan transport atau Transport Layer membaca nomor port dari headernya dan meneruskan
+               data yang telah diterimanya ke aplikasi masing-masing. Lapisan ini juga melakukan pengurutan dan
+               pemasangan kembali data yang tersegmentasi.
+            </p>
+            <p>
+               Fungsi dari Transport layer adalah sebagai berikut
+            </p>
+            <ul>
+               <li class="bullet">
+                  <p>
+                     <b>Segmentasi dan Reassembly:</b> Lapisan ini menerima pesan dari lapisan (sesi), dan memecah pesan
+                     menjadi unit-unit yang lebih kecil. Setiap segmen yang dihasilkan memiliki header yang terkait
+                     dengannya. Lapisan transport di stasiun tujuan menyusun kembali pesan.
+                  </p>
+               </li>
+               <li class="bullet">
+                  <p>
+                     <b>Service Point Addressing:</b> Untuk mengirimkan pesan ke proses yang benar, header lapisan
+                     transport menyertakan jenis alamat yang disebut Service Point Addressing atau alamat port. Jadi
+                     dengan menentukan alamat ini, lapisan transport memastikan bahwa pesan dikirim ke proses yang
+                     benar.
+                  </p>
+               </li>
+            </ul>
+         </li>
 
+         <li class="sub2">
+            Session Layer
+            <img src="../images/modul/image7.png" alt="Session Layer" class="img-clickable">
+            <p>
+               Session layer bertanggung jawab untuk pembentukan koneksi, pemeliharaan sesi, otentikasi, dan juga
+               memastikan keamanan.
+            </p>
+            <p>
+               Fungsi dari lapisan ini adalah:
+            </p>
+            <ul>
+               <li class="bullet">
+                  <p>
+                     <b>Pembentukan sesi, pemeliharaan, dan penghentian:</b> Session layer memungkinkan dua proses untuk
+                     membuat, menggunakan, dan mengakhiri koneksi.
+                  </p>
+               </li>
+               <li class="bullet">
+                  <p>
+                     <b>Sinkronisasi:</b> Lapisan ini memungkinkan proses untuk menambahkan pos pemeriksaan yang
+                     dianggap sebagai titik sinkronisasi ke dalam data. Titik sinkronisasi ini membantu mengidentifikasi
+                     kesalahan sehingga data disinkronkan ulang dengan benar, dan ujung pesan tidak terpotong sebelum
+                     waktunya dan dapat menghindar adanya kehilangan data.
+               </li>
+               <li class="bullet">
+                  <p>
+                     <b>Dialog Controller:</b> Lapisan sesi memungkinkan dua sistem untuk memulai komunikasi satu sama
+                     lain dalam half-duplex atau full-duplex.
+                  </p>
+               </li>
+            </ul>
+         </li>
 
-<!-- Modal Zoom Gambar -->
-<div id="imgModal" class="img-modal">
-  <span class="img-modal-close">&times;</span>
-  <img class="img-modal-content" id="imgModalContent">
+         <li class="sub2">
+            Presentation Layer
+            <img src="../images/modul/image8.png" alt="Presentation Layer" class="img-clickable">
+            <br>
+            <br>
+            <p>
+               Presentation layer biasa juga disebut Translation Layer. Data dari Application layer diekstraksi di sini
+               dan dimanipulasi sesuai format yang diperlukan untuk dikrim melalui jaringan.
+            </p>
+            <p>
+               Fungsi dari lapisan ini adalah:
+            </p>
+            <ul>
+               <li class="bullet">
+                  <p>
+                     <b>Translasi:</b> Misalnya, ASCH ke EBCDIC.
+                  </p>
+               </li>
+               <li class="bullet">
+                  <p>
+                     <b>Enkripsi/Deskripsi:</b> Enkripsi data menerjemahkan data ke dalam bentuk atau kode lain. Data
+                     terenkripsi dikenal sebagai ciphertext dan data yang didekripsi dikenal sebagai teks biasa. Nilai
+                     kunci digunakan untuk mengenkripsi serta mendeskripsi data.
+                  </p>
+               </li>
+               <li class="bullet">
+                  <p>
+                     <b>Kompresi:</b> Mengurangi jumlah bit yang perlu ditransmisikan pada jaringan.
+                  </p>
+               </li>
+            </ul>
+         </li>
+
+         <li class="sub2">
+            Application Layer
+            <p>Di bagian paling atas dari lapisan OSI Model, kita dapat menemukan Application Layer yang
+               diimplementasikan oleh aplikasi jaringan.</p>
+            <img src="../images/modul/image8.png" alt="Presentation Layer" class="img-clickable">
+            <p>
+               Aplikasi ini menghasilkan data yang harus ditransfer melalui jaringan. Lapisan ini juga berfungsi sebagai
+               jendela bagi layanan aplikasi untuk mengakses jaringan dan untuk menampilkan informasi yang diterima
+               kepada pengguna.
+            </p>
+         </li>
+         <h2 class="sub">Cara kerja Jaringan pada OSI Model</h2>
+         <p>
+            Agar informasi yang dapat dibaca manusia bisa ditransfer melalui jaringan dari satu perangkat ke perangkat
+            lain, data harus melewati tujuh lapisan OSI Model pada perangkat pengirim dan kemudian naik ke tujuh lapisan
+            di ujung penerima.
+         </p>
+         <p>
+            Misalnya: Rusdi ingin mengirim email ke Budi. Rusdi menulis pesannya dalam aplikasi email di laptopnya dan
+            kemudian menekan tombol 'Send'.
+         </p>
+         <p>
+            Aplikasi emailnya akan meneruskan pesan tersebut ke Application layer, guna memilih protokol (SMTP) dan
+            meneruskan data ke Presentation layer. Presentation layer yang bertugas memulai sesi komunikasi.
+         </p>
+         <p>
+            Data tersebuit kemudian akan mengenai Transport layer pengirim untuk dilakukan segmentasi. Segmen-segmen
+            tersebut akan dipecah menjadi paket-paket pada Network layer, yang selanjutnya akan dipecah lebih jauh lagi
+            menjadi frame-frame pada Data link layer.
+         </p>
+         <p>
+            Data link layer kemudian akan mengirimkan frame tersebut ke Physical layer, guna mengubah data menjadi
+            bitstream 1 dan 0 dan mengirimkannya melalui media fisik, seperti kabel.
+         </p>
+         <p>
+            Setelah komputer Budi menerima aliran bit melalui media fisik (seperti wifi), data akan mengalir melalui
+            rangkaian lapisan yang sama pada perangkatnya, tetapi dalam urutan yang berlawanan.
+         </p>
+         <p>
+            Pertama Physical layer akan mengubah bitstream dari 1 dan 0 menjadi frame yang diteruskan ke Data link
+            layer. Layer tersebut kemudian akan menyusun kembali frame-frame tersebut menjadi beberapa paket untuk
+            Network layer.
+         </p>
+         <p>
+            Network layer kemudian akan membuat segmen keluar dari paket untuk menuju Transprt layer, guna merakit
+            kembali segmen menjadi satu bagian data.
+         </p>
+         <p>
+            Data kemudian akan mengalir ke Session layer milik penerima (Wati), untuk meneruskan data ke Presentation
+            layer dan kemudian mengakhiri sesi komunikasi.
+         </p>
+         <p>
+            Presentation layer kemudian akan menghapus kompresi dan meneruskan data mentah ke Application layer. Setelah
+            itu, Application layer akan memasukkan data yang dapat dibaca manusia ke perangkat lunak email milik Budi,
+            sehingga dapat membaca pesan email dari Rusdi di layar laptop atau komputernya.
+         </p>
+         <br>
+         <br>
+
+         <div class="page-buttons">
+  <button class="page-button active" onclick="setActive(this); location.href='pj.html'">1</button>
+  <button class="page-button" onclick="setActive(this); location.href='pj2.html'">2</button>
+  <button class="page-button" onclick="setActive(this); location.href='pj3.html'">3</button>
 </div>
+
+
+
+
+   <!-- Modal Zoom Gambar -->
+   <div id="imgModal" class="img-modal">
+      <span class="img-modal-close">&times;</span>
+      <img class="img-modal-content" id="imgModalContent">
+   </div>
+
 
 
    <!--=============== MAIN JS ===============-->
    <script src="../../main.js"></script>
+   <script src="../js/pagination.js"></script>
 </body>
 
 </html>
