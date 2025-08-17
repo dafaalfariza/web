@@ -32,7 +32,7 @@ p {
     width: 58%;
 }
 
-.judulbesar{
+.judulbesar {
     font-family: 'Orbitron', sans-serif;
     font-size: 4rem;
     text-align: center;
@@ -63,39 +63,42 @@ h2.sub {
 }
 
 .page-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem; /* jarak antar tombol */
-  margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* jarak antar tombol */
+    margin-top: 2rem;
 }
 
 .page-button {
-  background-color: var(--black-color);
-  color: var(--white-color);
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  font-weight: var(--font-semi-bold);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: var(--font-semi-bold);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .page-button:hover {
-  background-color: var(--black-color-light);
-  transform: translateY(-2px);
+    background-color: var(--black-color-light);
+    transform: translateY(-2px);
 }
 
 .page-button:active {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 /* Tombol aktif */
 .page-button.active {
-  background: linear-gradient(45deg, #ff6ec4, #7873f5); /* gradien keren */
-  color: #ffffff;
-  box-shadow: 0 0 10px #ff6ec4, 0 0 20px #7873f5; /* glow efek */
-  transform: scale(1.1);
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    /* gradien keren */
+    color: #ffffff;
+    box-shadow: 0 0 10px #ff6ec4, 0 0 20px #7873f5;
+    /* glow efek */
+    transform: scale(1.1);
 }
 
 
@@ -126,6 +129,12 @@ h2.sub {
     margin: 1rem auto;
     width: fit-content;
     animation: fadeIn 2s ease forwards;
+}
+
+.full-box ol.romawi li {
+    list-style-type: upper-roman;
+    /* I, II, III */
+    /* atau lower-roman untuk i, ii, iii */
 }
 
 .full-box {
@@ -174,7 +183,8 @@ h2.sub {
 
 .full-box ol,
 .full-box ul {
-    padding-left: 1.2em; /* lebih rapat dari 2.5em */
+    padding-left: 1.2em;
+    /* lebih rapat dari 2.5em */
 }
 
 .full-box ol li.sub1 {
@@ -210,6 +220,17 @@ h2.sub {
     color: #8ef5f5;
 }
 
+.full-box ol.angka li.subjudul {
+    font-family: 'Exo 2', sans-serif;
+    /* Font keren seperti sub-judul */
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    position: relative;
+    color: mediumslateblue;
+}
+
 .full-box ol li p {
     font-family: 'Times New Roman', Times, serif;
     /* Font berbeda untuk paragraf */
@@ -229,13 +250,52 @@ h2.sub {
     color: yellowgreen;
 }
 
-.full-box ul li {
+.full-box ul li,
+.full-box ul li.bullet,
+.full-box ul.circle li {
     margin-left: 1em;
 }
 
 .full-box li {
-    margin-left: 0; /* hilangkan jarak tambahan */
-    text-indent: 0; /* teks tetap sejajar marker */
+    margin-left: 0;
+    /* hilangkan jarak tambahan */
+    text-indent: 0;
+    /* teks tetap sejajar marker */
+}
+
+.full-box ul.circle {
+    list-style-type: circle;
+}
+
+.full-box ul.circle li::marker {
+    color: yellowgreen;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    /* supaya garis tabel jadi 1 */
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+th,
+td {
+    border: 1px solid rgb(255, 255, 255);
+    /* garis tabel */
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+th {
+    background-color: #97c1ff;
+    /* warna header */
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 @keyframes fadeIn {
@@ -251,18 +311,34 @@ h2.sub {
 }
 
 @media (max-width: 768px) {
+    table {
+        font-size: 0.8rem;
+        /* kecilin font */
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+
     .full-box {
         padding: 20px 15px;
         border-radius: 10px;
     }
 
     .full-box img {
-    max-width: 100%;   /* Biar gambar tidak lebih lebar dari .full-box */
-    height: auto;      /* Menjaga rasio gambar */
-    display: block;    /* Menghindari space ekstra */
-    margin: 10px auto; /* Opsional: supaya di tengah */
-    border-radius: 10px; /* Opsional: kasih sudut membulat */
-}
+        max-width: 100%;
+        /* Biar gambar tidak lebih lebar dari .full-box */
+        height: auto;
+        /* Menjaga rasio gambar */
+        display: block;
+        /* Menghindari space ekstra */
+        margin: 10px auto;
+        /* Opsional: supaya di tengah */
+        border-radius: 10px;
+        /* Opsional: kasih sudut membulat */
+    }
 
     .full-box h1 {
         font-size: 1.5em;
@@ -340,6 +416,16 @@ h2.sub {
 }
 
 @media (max-width: 420px) {
+    table {
+        font-size: 0.8rem;
+        /* lebih kecil lagi */
+    }
+
+    th,
+    td {
+        padding: 4px;
+    }
+
     .full-box {
         padding: 10px 8px;
         border-radius: 10px;
@@ -350,7 +436,7 @@ h2.sub {
         text-align: center;
     }
 
-    p, 
+    p,
     .full-box p,
     .full-box ol li p {
         font-size: 1.1em;
@@ -360,12 +446,17 @@ h2.sub {
     }
 
     .full-box img {
-    max-width: 100%;   /* Biar gambar tidak lebih lebar dari .full-box */
-    height: auto;      /* Menjaga rasio gambar */
-    display: block;    /* Menghindari space ekstra */
-    margin: 10px auto; /* Opsional: supaya di tengah */
-    border-radius: 10px; /* Opsional: kasih sudut membulat */
-}
+        max-width: 100%;
+        /* Biar gambar tidak lebih lebar dari .full-box */
+        height: auto;
+        /* Menjaga rasio gambar */
+        display: block;
+        /* Menghindari space ekstra */
+        margin: 10px auto;
+        /* Opsional: supaya di tengah */
+        border-radius: 10px;
+        /* Opsional: kasih sudut membulat */
+    }
 
     ol {
         padding-left: 1em;
@@ -427,10 +518,10 @@ h2.sub {
     }
 
     .neon-title {
-    font-size: 1.8rem;
-    padding: 15px 25px;
-    letter-spacing: 1px;
-  }
+        font-size: 1.8rem;
+        padding: 15px 25px;
+        letter-spacing: 1px;
+    }
 }
 
 /* === IMAGE MODAL ZOOM === */
@@ -438,41 +529,43 @@ h2.sub {
     cursor: zoom-in;
     transition: transform 0.3s ease;
 }
+
 .img-clickable:hover {
     transform: scale(1.02);
 }
 
 .img-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  padding-top: 50px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: rgba(0,0,0,0.9);
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .img-modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 90%;
-  cursor: grab;
-  transition: transform 0.3s ease;
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    cursor: grab;
+    transition: transform 0.3s ease;
 }
 
 .img-modal-close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
+
 .img-modal-close:hover {
-  color: #ccc;
+    color: #ccc;
 }

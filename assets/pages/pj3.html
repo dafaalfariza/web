@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="shortcut icon" href="../images/apaycoding_logo_copy.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../css/mapel.css">
+
+    <title>Pengalamatan Jaringan - TCP/IP</title>
+</head>
+<style>
+    body {
+        background-image: url(../images/dark-background-web.png);
+        /* Pindahkan background ke CSS utama */
+    }
+</style>
+
+<body>
+
+    <!--=============== HEADER ===============-->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="../../index.html" class="nav__logo">
+                    <a href=".././index.html" class="navbar-logo"><img src="../images/apaycoding_logo_copy.png"
+                            alt="">IpayyCoding</a>
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../../index.html" class="nav__link">Home</a></li>
+
+                    <li><a href="../pages/updates.html" class="nav__link">Updates</a></li>
+
+                    <!--=============== DROPDOWN 1 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Materi <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+
+
+                            <!--=============== DROPDOWN SUBMENU ===============-->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-award-line"></i> Produktif <i class="ri-add-line dropdown__add"></i>
+                                </div>
+
+                                <ul class="dropdown__submenu">
+                                    <li>
+                                        <a href="kj.html" class="dropdown__sublink">
+                                            <i class="ri-book-read-line"></i> KJ
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="tjkn.html" class="dropdown__sublink">
+                                            <i class="ri-book-read-line"></i> TJKN
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="pkk.html" class="dropdown__sublink">
+                                            <i class="ri-book-read-line"></i> PKK
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="pj.html" class="dropdown__sublink">
+                                            <i class="ri-book-read-line"></i>PJ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <!--=============== DROPDOWN 2 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Source Code <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-code-line"></i> Navbar
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-code-line"></i> Parallax
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--=============== DROPDOWN 3 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Our Social <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="https://discord.gg/Gu3qRvqv" target="_blank" class="dropdown__link">
+                                    <i class="ri-discord-fill"></i> Discord Server's
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://github.com/dafaalfariza" target="_blank" class="dropdown__link">
+                                    <i class="ri-github-fill"></i> GitHub
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.instagram.com/sajowataru_/" target="_blank" class="dropdown__link">
+                                    <i class="ri-instagram-fill"></i> Instagram
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://x.com/CallMeDaff7" target="_blank" class="dropdown__link">
+                                    <i class="ri-twitter-x-line"></i> Twitter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#" class="nav__link">Contact</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <h1 class="neon-title">A. Pengalamatan</h1>
+    <div class="full-box">
+        <ol class="angka">
+            <li>Pengertian IP Address</li>
+            <p>IP Address (Internet Protocol Address) adalah alamat unik yang diberkan kepada setiap perangkat yang
+                terhubung ke jaringan komputer yang menggunakan protokol Internet untuk komunikasi. IP Address berfungsi
+                sebagai identitas dan lokasi perangkat dalam jaringan agar data dapat dikirim dengan tepat. </p>
+
+            <li>Jenis-Jenis IP Address</li>
+            <ul>
+                <li class="bullet">
+                    IPv4
+                    <ul class="circle">
+                        <li>
+                            <p>Format: 32-bit, biasanya ditulis dalam bentuk desimal bertitik (contoh: 192.168.0.1) </p>
+                        </li>
+                        <li>
+                            <p>Terdiri dari 4 oktet (4 kelompok angka dari 0 sampai 255) </p>
+                        </li>
+                        <li>
+                            <p>Contoh: 10.0.0.1, 172.16.0.1, 192.168.1.1</p>
+                        </li>
+                        <li>
+                            <p>IPv4 hanya memiliki 4,3 miliar alamat unik.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bullet">
+                    IPv6
+                    <ul class="circle">
+                        <li>
+                            <p>Format: 128-bit, ditulis dalam heksadesimal dengan tanda titik dua (contoh:
+                                2001:0db8:85a3::8a2e:0370:7334) </p>
+                        </li>
+                        <li>
+                            <p>Dikembangkan untuk mengatasi keterbatasan IPv4 dengan jumlah alamat yang sangat banyak.
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <li>Struktur IP Address IPv4</li>
+            <p>IP Address IPv4 dibagi menjadi dua bagian: </p>
+            <ul>
+                <li class="bullet">
+                    <p><b>Network ID</b> (identifikasi jaringan)</p>
+                </li>
+                <li class="bullet">
+                    <p><b>Host ID</b> (identifikasi perangkat dalam jaringan)</p>
+                </li>
+            </ul>
+            <p>Misalnya, pada IP 192.168.1.10 dengan subnetmask 255.255.255.0:</p>
+            <ul>
+                <li class="bullet">
+                    <p>Network ID = 192.168.1</p>
+                </li>
+                <li class="bullet">
+                    <p>Host ID = 10</p>
+                </li>
+            </ul>
+
+            <li>Subnet Mask</li>
+            <p>Subnet Mask digunakan untuk <b>memisahkan bagian Network ID dan Host ID pada IP Address.</b> Contoh
+                subnet mask yang umum:</p>
+            <ul>
+                <li class="bullet">
+                    <p>255.0.0.0 (kelas A)</p>
+                </li>
+                <li class="bullet">
+                    <p>255.255.0.0 (kelas B)</p>
+                </li>
+                <li class="bullet">
+                    <p>255.255.255.0 (kelas C)</p>
+                </li>
+            </ul>
+            <p>Subnetting memungkinkan jaringan besar dibagi menjadi jaringan lebih kecil.</p>
+
+            <li>Kelas IP Address (Classfull) IPv4</li>
+            <ul>
+                <li class="bullet">
+                    <p><b>Kelas A:</b> 1.0.0.0 - 127.255.255.255 (untuk jaringan sangat besar)</p>
+                </li>
+                <li class="bullet">
+                    <p><b>Kelas B:</b> 128.0.0.0 - 191.255.255.255 (jaringan menengah)</p>
+                </li>
+                <li class="bullet">
+                    <p><b>Kelas C:</b> 192.0.0.0 - 223.255.255.255 (jaringan kecil, LAN biasanay)</p>
+                </li>
+                <li class="bullet">
+                    <p><b>Kelas D:</b> 224.0.0.0 - 239.255.255.255 (multicast)</p>
+                </li>
+                <li class="bullet">
+                    <p><b>Kelas E:</b>240.0.0.0 - 255.255.255.255 (eksperimental)</p>
+                </li>
+            </ul>
+
+            <ol class="romawi">
+                <li class="subjudul">Kelas A</li>
+                <p>Kelas A adalah salah satu pembagian alamat IPv4 berdasarkan <i>classfull addressing</i> (sistem lama
+                    sebelum CIDR). Kelas ini dipakai untuk jaringan yang <b>sangat besar</b> karena jumlah host per
+                    jaringannya banyak sekali.</p>
+                <img src="../images/modul/image12.png" alt="Kelas A" class="img-clickable">
+                <br>
+                <br>
+                <hr>
+                <br>
+
+            </ol>
+            <ol class="angka" start="2">
+                <li class="subjudul">Kelebihan & Kekurangan</li>
+            </ol>
+            <h3 class="subjudul">Kelebihan:</h3>
+            <ul>
+                <li class="bullet">
+                    <p>Host banyak (cocok untuk jaringan besar).</p>
+                </li>
+            </ul>
+            <h3 class="subjudul">Kekurangan:</h3>
+            <ul>
+                <li class="bullet">
+                    <p>Boros IP kalau jaringannya kecil.</p>
+                </li>
+                <li class="bullet">
+                    <p>Tidak efisien untuk organisasi menengah/kecil (makanya sekarang dipakai 'subnetting/CIDR').</p>
+                </li>
+            </ul>
+
+            <ol class="romawi" start="2">
+                <li class="subjudul">Kelas B</li>
+            </ol>
+            <p>Kelas B adalah kategori alamat IPv4 dalam sistem <i>Classfull addressing</i> yang digunakan untuk
+                jaringan <b>skala menengah hingga besar.</b> Jumlah host per jaringan tidak sebesar kelas A, tapi jaih
+                lebih efisien kalau jumlah perangkatnya ribuan. </p>
+            <br>
+            <hr>
+            <br>
+            <br>
+
+            <img src="../images/modul/image13.png" alt="Kelas A" class="img-clickable">
+            <br>
+            <br>
+            <hr>
+            <br>
+
+            <ol class="angka" start="2">
+                <li class="subjudul">Kelebihan & Kekurangan</li>
+            </ol>
+            <h3 class="subjudul">Kelebihan:</h3>
+            <ul>
+                <li class="bullet">
+                    <p>Cocok untuk perusahaan atau kampus besar.</p>
+                </li>
+                <li class="bullet">
+                    <p>Lebih hemat IP dibanding kelas A.</p>
+                </li>
+            </ul>
+            <h3 class="subjudul">Kekurangan:</h3>
+            <ul>
+                <li class="bullet">
+                    <p>Masih boros jika jaringannya kecil (makanya sekarang pakai subnetting/CIDR).</p>
+                </li>
+            </ul>
+
+            <ol class="romawi" start="3">
+                <li class="subjudul">Kelas C</li>
+            </ol>
+            <p>Kelas C adalah salah satu kategori alamat IPv4 pada sistem <i>classfull addressing</i>, digunakan untuk
+                jaringan <b>skala kecil</b> (misalnya kantor kecil, lab, atau rumah).</p>
+            <hr>
+            <br>
+            <br>
+            <img src="../images/modul/image14.png" alt="Kelas A" class="img-clickable">
+            <br>
+            <br>
+            <hr>
+            <br>
+
+            <ol class="angka" start="2">
+                <li class="subjudul">Kelebihan & Kekurangan</li>
+            </ol>
+            <h3 class="subjudul">Kelebihan:</h3>
+            <ul>
+                <li class="bullet">
+                    <p>Jumlah jaringan sangat banyak</p>
+                </li>
+                <li class="bullet">
+                    <p>Tidak boros alamat</p>
+                </li>
+                <li class="bullet">
+                    <p>Konfigurasi mudah</p>
+                </li>
+                <li class="bullet">
+                    <p>Lebih aman</p>
+                </li>
+            </ul>
+            <h3 class="subjudul">Kekurangan:</h3>
+            <ul>
+                <li class="bullet">
+                    <p>Jumlah host per jaringan sedikit</p>
+                </li>
+                <li class="bullet">
+                    <p>Kurang fleksibel untuk jaringan besar</p>
+                </li>
+            </ul>
+
+            <li>IP Address Private dan public</li>
+            <ul>
+                <li class="bullet">
+                    <p style="color: lightpink;"><b>Private IP Address:</b></p>
+                </li>
+                <p>Digunakan dalam jaringan lokal dan tidak bisa diakses langsung dari internet. Contoh:</p>
+                <ul class="circle">
+                    <li>
+                        <p>10.0.0.0 - 10.255.255.255</p>
+                    </li>
+                    <li>
+                        <p>172.16.0.0 – 172.31.255.255</p>
+                    </li>
+                    <li>
+                        <p>192.168.0.0 – 192.168.255.255</p>
+                    </li>
+                </ul>
+            </ul>
+            <ul>
+                <li class="bullet">
+                    <p style="color: lightpink;"><b>Public IP Address:</b></p>
+                </li>
+                <p>Alamat yang bisa diakses di internet dan diberikan oleh ISP.</p>
+
+        </ol>
+    </div>
+
+    <h1 class="neon-title">B. CIDR (Classless Inter Domain Routing)</h1>
+    <div class="full-box">
+        <p>CIDR adalah metode penulisan dan pembagian alamat IP yang tidak bergantung pada kelas A/B/C seperti pada
+            sistem <i>classfull addressing.</i></p>
+        <p>Frmat penulisan: alamat_IP/prefix_length</p>
+        <p>Contoh: 192.168.10.0/24</p>
+        <ul>
+            <li class="bullet">
+                <p>192.168.10.0 &rarr; alamat network</p>
+            </li>
+            <li class="bullet">
+                <p>/24 &rarr; jumlah bit untuk network (<i>prefix length</i>), sisanya untuk host.</p>
+            </li>
+        </ul>
+        <hr>
+        <br>
+
+        <ol class="angka">
+            <li>Tujuan CIDR</li>
+            <ul>
+                <li class="bullet">
+                    <p>Mengganti sistem <i>classfull</i> yang kaku.</p>
+                </li>
+                <li class="bullet">
+                    <p>Menghemat penggunaan alamat IP (konservasi IPv4).</p>
+                </li>
+                <li class="bullet">
+                    <p>Mempermudah penggabungan jaringan (<i>route aggregation</i>).</p>
+                </li>
+                <li class="bullet">
+                    <p>Fleksibilitas dalam pembagian subnet.</p>
+                </li>
+            </ul>
+            <hr>
+            <br>
+
+            <li>Struktur CIDR</li>
+            <p>IP address dibagi jadi:</p>
+            <ul>
+                <li class="bullet">
+                    <p>Network ID &rarr; bagian awal, menunjukkan jaringan.</p>
+                </li>
+                <li class="bullet">
+                    <p>Host ID &rarr; bagian akhir, menunjukkan perangkat dalam jaringan.</p>
+                </li>
+            </ul>
+            <p>Prefix length (/x) menentukan batasnya:</p>
+            <ul>
+                <li class="bullet">
+                    <p>/8 &rarr; 8 bit network, 24 bit host.</p>
+                </li>
+                <li class="bullet">
+                    <p>/16 &rarr; 16 bit network, 16 bit host.</p>
+                </li>
+                <li class="bullet">
+                    <p>/24 &rarr; 24 bit network, 8 bit host.</p>
+                </li>
+            </ul>
+            <hr>
+            <br>
+
+            <li>Tabel CIDR IPv4</li>
+            <table>
+                <tr>
+                    <th>CIDR</th>
+                    <th>Subnet Mask</th>
+                    <th>Jumlah Host Usable</th>
+                    <th>Network Increment</th>
+                </tr>
+                <tr>
+                    <td>/8</td>
+                    <td>255.0.0.0</td>
+                    <td>16.777.214</td>
+                    <td>1.0.0.0</td>
+                </tr>
+                <tr>
+                    <td>/16</td>
+                    <td>255.255.0.0</td>
+                    <td>65.534</td>
+                    <td>0.1.0.0</td>
+                </tr>
+                <tr>
+                    <td>/24</td>
+                    <td>255.255.255.0</td>
+                    <td>254</td>
+                    <td>0.0.1.0</td>
+                </tr>
+                <tr>
+                    <td>/25</td>
+                    <td>255.255.255.128</td>
+                    <td>126</td>
+                    <td>0.0.0.128</td>
+                </tr>
+                <tr>
+                    <td>/26</td>
+                    <td>255.255.255.192</td>
+                    <td>62</td>
+                    <td>0.0.0.64</td>
+                </tr>
+                <tr>
+                    <td>/27</td>
+                    <td>255.255.255.224</td>
+                    <td>30</td>
+                    <td>0.0.0.32</td>
+                </tr>
+                <tr>
+                    <td>/28</td>
+                    <td>255.255.255.240</td>
+                    <td>14</td>
+                    <td>0.0.0.16</td>
+                </tr>
+                <tr>
+                    <td>/29</td>
+                    <td>255.255.255.248</td>
+                    <td>6</td>
+                    <td>0.0.0.8</td>
+                </tr>
+                <tr>
+                    <td>/30</td>
+                    <td>255.255.255.252</td>
+                    <td>2</td>
+                    <td>0.0.0.4</td>
+                </tr>
+            </table>
+        </ol>
+
+    </div>
+
+    <!-- Modal Zoom Gambar -->
+    <div id="imgModal" class="img-modal">
+        <span class="img-modal-close">&times;</span>
+        <img class="img-modal-content" id="imgModalContent">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../../main.js"></script>
+</body>
