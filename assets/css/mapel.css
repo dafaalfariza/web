@@ -501,6 +501,19 @@ p {
         word-spacing: normal;
     }
 
+    .full-box ul.circle li p.mobile {
+        font-size: 0.9em;
+    }
+
+    .full-box p,
+    .full-box p.mobile {
+        font-size: 0.9em;
+    }
+
+    .p.mobile {
+        font-size: 0.9em;
+    }
+
     .full-box img {
         max-width: 100%;
         /* Biar gambar tidak lebih lebar dari .full-box */
