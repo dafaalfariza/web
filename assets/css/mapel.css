@@ -341,7 +341,7 @@ caption {
 
 @media (max-width: 768px) {
     table {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         /* kecilin font */
     }
 
@@ -381,14 +381,9 @@ caption {
         text-align: center;
     }
 
-    p,
-    .p
-    .p.mobile
     .full-box p,
-    .full-box .p,
-    .full-box .p.mobile,
     ol li p {
-        font-size: 0.95em;
+        font-size: 0.9em;
         text-align: justify;
     }
 
@@ -459,7 +454,7 @@ caption {
 @media (max-width: 420px) {
 
     table {
-        font-size: 1rem;
+        font-size: 0.9rem;
         /* lebih kecil lagi */
     }
 
@@ -488,7 +483,7 @@ caption {
     .p
     .full-box .p.mobile,
     .full-box .p {
-        font-size: 0.95em;
+        font-size: 1em;
         text-align: justify;
         text-align-last: left;
         word-spacing: normal;
