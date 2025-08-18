@@ -339,6 +339,30 @@ caption {
     }
 }
 
+@media (min-width: 769px) {
+    table {
+      width: 50%;
+      border-collapse: collapse; /* supaya garis tabel jadi 1 */
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+    }
+
+    th, td {
+      border: 1px solid #fff; /* garis tabel */
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #9cc4ff; /* warna header */
+    }
+
+    caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     table {
         font-size: 0.8rem;
@@ -642,4 +666,5 @@ p {
 
 .img-modal-close:hover {
     color: #ccc;
+}
 }
