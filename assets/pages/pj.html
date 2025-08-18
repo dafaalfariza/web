@@ -155,7 +155,7 @@
       </nav>
    </header>
    <!-- Materi -->
-   <h1 class="neon-title">OSI LAYER dan TCP/IP</h1>
+   <h1 class="neon-title" id="materi1">OSI LAYER dan TCP/IP</h1>
    <div class="full-box">
 
         <!-- Page 1 -->
@@ -190,13 +190,11 @@
             Gambar TCP/IP MODEL dan OSI MODEL
             <img src="../images/modul/image.png" alt="OSI LAYER dan TCP/IP" class="img-clickable">
             <p>Gambar Perbedaan OSI Model dan TCP/IP Model</p>
-         </li>
-         <br>
-         <br>
-
-         <p>Dalam jaringan komputer, terdapat 2 model utama yang menjadi standar agar masing-masing perangkat komputer
+            <br>
+            <p>Dalam jaringan komputer, terdapat 2 model utama yang menjadi standar agar masing-masing perangkat komputer
             dapat saling terhubung. Model pada jaringan komputer yang menjadi standar agar komunikasi antar perangkat
             dapat berjalan dengan baik adalah <b>OSI Model dan TCP/IP.</b></p>
+         </li>
          <br>
          <br>
          </li>
@@ -534,7 +532,7 @@
             Application Layer
             <p>Di bagian paling atas dari lapisan OSI Model, kita dapat menemukan Application Layer yang
                diimplementasikan oleh aplikasi jaringan.</p>
-            <img src="../images/modul/image8.png" alt="Presentation Layer" class="img-clickable">
+            <img src="../images/modul/image9.png" alt="Presentation Layer" class="img-clickable">
             <p>
                Aplikasi ini menghasilkan data yang harus ditransfer melalui jaringan. Lapisan ini juga berfungsi sebagai
                jendela bagi layanan aplikasi untuk mengakses jaringan dan untuk menampilkan informasi yang diterima
@@ -542,67 +540,68 @@
             </p>
          </li>
          <h2 class="sub">Cara kerja Jaringan pada OSI Model</h2>
-         <p>
+         <p class="mobile">
             Agar informasi yang dapat dibaca manusia bisa ditransfer melalui jaringan dari satu perangkat ke perangkat
             lain, data harus melewati tujuh lapisan OSI Model pada perangkat pengirim dan kemudian naik ke tujuh lapisan
             di ujung penerima.
          </p>
-         <p>
+         <p class="mobile">
             Misalnya: Rusdi ingin mengirim email ke Budi. Rusdi menulis pesannya dalam aplikasi email di laptopnya dan
             kemudian menekan tombol 'Send'.
          </p>
-         <p>
+         <p class="mobile">
             Aplikasi emailnya akan meneruskan pesan tersebut ke Application layer, guna memilih protokol (SMTP) dan
             meneruskan data ke Presentation layer. Presentation layer yang bertugas memulai sesi komunikasi.
          </p>
-         <p>
+         <p class="mobile">
             Data tersebuit kemudian akan mengenai Transport layer pengirim untuk dilakukan segmentasi. Segmen-segmen
             tersebut akan dipecah menjadi paket-paket pada Network layer, yang selanjutnya akan dipecah lebih jauh lagi
             menjadi frame-frame pada Data link layer.
          </p>
-         <p>
+         <p class="mobile">
             Data link layer kemudian akan mengirimkan frame tersebut ke Physical layer, guna mengubah data menjadi
             bitstream 1 dan 0 dan mengirimkannya melalui media fisik, seperti kabel.
          </p>
-         <p>
+         <p class="mobile">
             Setelah komputer Budi menerima aliran bit melalui media fisik (seperti wifi), data akan mengalir melalui
             rangkaian lapisan yang sama pada perangkatnya, tetapi dalam urutan yang berlawanan.
-         </p>
-         <p>
+         </p class="mobile">
+         <p class="mobile">
             Pertama Physical layer akan mengubah bitstream dari 1 dan 0 menjadi frame yang diteruskan ke Data link
             layer. Layer tersebut kemudian akan menyusun kembali frame-frame tersebut menjadi beberapa paket untuk
             Network layer.
          </p>
-         <p>
+         <p class="mobile">
             Network layer kemudian akan membuat segmen keluar dari paket untuk menuju Transprt layer, guna merakit
             kembali segmen menjadi satu bagian data.
          </p>
-         <p>
+         <p class="mobile">
             Data kemudian akan mengalir ke Session layer milik penerima (Wati), untuk meneruskan data ke Presentation
             layer dan kemudian mengakhiri sesi komunikasi.
          </p>
-         <p>
+         <p class="mobile">
             Presentation layer kemudian akan menghapus kompresi dan meneruskan data mentah ke Application layer. Setelah
             itu, Application layer akan memasukkan data yang dapat dibaca manusia ke perangkat lunak email milik Budi,
             sehingga dapat membaca pesan email dari Rusdi di layar laptop atau komputernya.
          </p>
          <br>
          <br>
-
+      
          <div class="page-buttons">
   <button class="page-button active" onclick="setActive(this); location.href='pj.html'">1</button>
   <button class="page-button" onclick="setActive(this); location.href='pj2.html'">2</button>
   <button class="page-button" onclick="setActive(this); location.href='pj3.html'">3</button>
+  <button class="page-button" onclick="setActive(this); location.href='pj4.html'">4</button>
+  <button class="page-button" onclick="setActive(this); location.href='pj5.html'">5</button>
 </div>
 
+</div>
 
-
-
-   <!-- Modal Zoom Gambar -->
-   <div id="imgModal" class="img-modal">
-      <span class="img-modal-close">&times;</span>
-      <img class="img-modal-content" id="imgModalContent">
-   </div>
+<!-- Modal Zoom Gambar -->
+    <div id="imgModal" class="img-modal">
+        <span class="img-modal-close">&times;</span>
+        <img class="img-modal-content" id="imgModalContent">
+    </div>
 
 
 

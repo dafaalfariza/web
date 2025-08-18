@@ -6,8 +6,7 @@
 html,
 body {
     max-width: 100%;
-    overflow-x: hidden;
-    /* cegah scroll ke kanan */
+    overflow-x: hidden;/* cegah scroll ke kanan */
 }
 
 
@@ -75,6 +74,13 @@ p {
     animation: fadeIn 1.5s ease forwards;
 }
 
+.judulkecil,
+.h3.judulkecil,
+.full-box h3.judulkecil {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: yellowgreen;
+}
+
 h2.sub {
     font-size: 1.5em;
     margin: 0 auto 20px;
@@ -84,6 +90,14 @@ h2.sub {
     font-family: 'Press Start 2P', cursive;
     font-size: 40px;
     font-weight: bold;
+}
+
+.full-box .mini {
+    font-size: 15px;
+}
+
+.full-box ol > li.mini {
+    color: hotpink;
 }
 
 .page-buttons {
@@ -153,12 +167,24 @@ h2.sub {
     margin: 1rem auto;
     width: fit-content;
     animation: fadeIn 2s ease forwards;
+    margin: 30px auto;
 }
 
 .full-box ol.romawi li {
+    color: hotpink;
     list-style-type: upper-roman;
     /* I, II, III */
     /* atau lower-roman untuk i, ii, iii */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.full-box ol.romawikecil li {
+    color: pink;
+    font-size: 17px;
+    list-style-type: upper-roman;
+    /* I, II, III */
+    /* atau lower-roman untuk i, ii, iii */
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .full-box {
@@ -340,6 +366,10 @@ caption {
 }
 
 @media (min-width: 769px) {
+    body {
+        padding: 90px 0 0 0; /* biar navbar fixed ada jarak */
+    }
+
     table {
       width: 50%;
       border-collapse: collapse; /* supaya garis tabel jadi 1 */
@@ -364,6 +394,7 @@ caption {
 }
 
 @media (max-width: 768px) {
+
     table {
         font-size: 0.8rem;
         /* kecilin font */
@@ -403,6 +434,10 @@ caption {
     .full-box h1 {
         font-size: 1.5em;
         text-align: center;
+    }
+
+    .full-box p.mobile {
+        font-size: 1.2rem;
     }
 
     .full-box p,
@@ -472,12 +507,15 @@ caption {
 
     .neon-title {
         width: 100%;
+        margin-top: 0;
     }
 }
 
 @media (max-width: 420px) {
-p {
-    font-size: 0.9em;
+p,
+ul li p {
+  font-size: 1.2rem;   /* samain ukuran */
+  line-height: 1.5;  /* biar enak dibaca */
 }
 
     table {
@@ -506,8 +544,6 @@ p {
         text-align: center;
     }
 
-    p,
-    .p
     .full-box p,
     .full-box ol li p, 
     .full-box ol.angka li p,

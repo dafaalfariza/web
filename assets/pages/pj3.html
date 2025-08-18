@@ -29,9 +29,9 @@
     <header class="header">
         <nav class="nav container">
             <div class="nav__data">
-                <a href="../../index.html" class="nav__logo">
-                    <a href=".././index.html" class="navbar-logo"><img src="../images/apaycoding_logo_copy.png"
-                            alt="">IpayyCoding</a>
+                <a href="../../index.html" class="nav__logo navbar-logo">
+                   <img src="../images/apaycoding_logo_copy.png"
+                            alt="">IpayyCoding
                 </a>
 
                 <div class="nav__toggle" id="nav-toggle">
@@ -153,13 +153,14 @@
     </header>
 
     <!-- Body -->
-    <h1 class="neon-title">A. Pengalamatan</h1>
+    <h1 class="neon-title" id="materi2">A. Pengalamatan</h1>
     <div class="full-box">
         <ol class="angka">
-            <li>Pengertian IP Address</li>
+            <li>Pengertian IP Address
             <p>IP Address (Internet Protocol Address) adalah alamat unik yang diberkan kepada setiap perangkat yang
                 terhubung ke jaringan komputer yang menggunakan protokol Internet untuk komunikasi. IP Address berfungsi
                 sebagai identitas dan lokasi perangkat dalam jaringan agar data dapat dikirim dengan tepat. </p>
+            </li>
 
             <li>Jenis-Jenis IP Address</li>
             <ul>
@@ -195,8 +196,9 @@
                 </li>
             </ul>
 
-            <li>Struktur IP Address IPv4</li>
+            <li>Struktur IP Address IPv4
             <p>IP Address IPv4 dibagi menjadi dua bagian: </p>
+            
             <ul>
                 <li class="bullet">
                     <p><b>Network ID</b> (identifikasi jaringan)</p>
@@ -206,6 +208,7 @@
                 </li>
             </ul>
             <p>Misalnya, pada IP 192.168.1.10 dengan subnetmask 255.255.255.0:</p>
+            
             <ul>
                 <li class="bullet">
                     <p>Network ID = 192.168.1</p>
@@ -214,8 +217,9 @@
                     <p>Host ID = 10</p>
                 </li>
             </ul>
+            </li>
 
-            <li>Subnet Mask</li>
+            <li>Subnet Mask
             <p>Subnet Mask digunakan untuk <b>memisahkan bagian Network ID dan Host ID pada IP Address.</b> Contoh
                 subnet mask yang umum:</p>
             <ul>
@@ -230,6 +234,7 @@
                 </li>
             </ul>
             <p>Subnetting memungkinkan jaringan besar dibagi menjadi jaringan lebih kecil.</p>
+            </li>
 
             <li>Kelas IP Address (Classfull) IPv4</li>
             <ul>
@@ -251,11 +256,12 @@
             </ul>
 
             <ol class="romawi">
-                <li class="subjudul">Kelas A</li>
+                <li class="subjudul">Kelas A
                 <p>Kelas A adalah salah satu pembagian alamat IPv4 berdasarkan <i>classfull addressing</i> (sistem lama
                     sebelum CIDR). Kelas ini dipakai untuk jaringan yang <b>sangat besar</b> karena jumlah host per
                     jaringannya banyak sekali.</p>
                 <img src="../images/modul/image12.png" alt="Kelas A" class="img-clickable">
+                </li>
                 <br>
                 <br>
                 <hr>
@@ -282,11 +288,14 @@
             </ul>
 
             <ol class="romawi" start="2">
-                <li class="subjudul">Kelas B</li>
-            </ol>
+                <li class="subjudul">Kelas B
+            
             <p>Kelas B adalah kategori alamat IPv4 dalam sistem <i>Classfull addressing</i> yang digunakan untuk
                 jaringan <b>skala menengah hingga besar.</b> Jumlah host per jaringan tidak sebesar kelas A, tapi jaih
                 lebih efisien kalau jumlah perangkatnya ribuan. </p>
+            </li>
+            </ol>
+        
             <br>
             <hr>
             <br>
@@ -318,14 +327,14 @@
             </ul>
 
             <ol class="romawi" start="3">
-                <li class="subjudul">Kelas C</li>
+                <li class="subjudul">Kelas C
+            <p>Kelas C adalah salah satu kategori alamat IPv4 pada sistem <i>classfull addressing</i>, digunakan untuk jaringan <b>skala kecil</b> (misalnya kantor kecil, lab, atau rumah).</p>
+                </li>
             </ol>
-            <p>Kelas C adalah salah satu kategori alamat IPv4 pada sistem <i>classfull addressing</i>, digunakan untuk
-                jaringan <b>skala kecil</b> (misalnya kantor kecil, lab, atau rumah).</p>
             <hr>
             <br>
             <br>
-            <img src="../images/modul/image14.png" alt="Kelas A" class="img-clickable">
+            
             <br>
             <br>
             <hr>
@@ -359,12 +368,12 @@
                 </li>
             </ul>
 
-            <li>IP Address Private dan public</li>
+            <li>IP Address Private dan public
             <ul>
                 <li class="bullet">
                     <p style="color: lightpink;"><b>Private IP Address:</b></p>
-                </li>
                 <p>Digunakan dalam jaringan lokal dan tidak bisa diakses langsung dari internet. Contoh:</p>
+                </li>
                 <ul class="circle">
                     <li>
                         <p>10.0.0.0 - 10.255.255.255</p>
@@ -382,16 +391,20 @@
                     <p style="color: lightpink;"><b>Public IP Address:</b></p>
                 </li>
                 <p>Alamat yang bisa diakses di internet dan diberikan oleh ISP.</p>
+            </ul>
+            </li>
 
         </ol>
     </div>
 
-    <h1 class="neon-title">B. CIDR (Classless Inter Domain Routing)</h1>
+    <h1 class="neon-title" id="materi3">B. CIDR (Classless Inter Domain Routing)</h1>
     <div class="full-box">
-        <p>CIDR adalah metode penulisan dan pembagian alamat IP yang tidak bergantung pada kelas A/B/C seperti pada
-            sistem <i>classfull addressing.</i></p>
+        <ol class="angka">
+            <li>Pengertian CIDR
+        <p>CIDR adalah metode penulisan dan pembagian alamat IP yang tidak bergantung pada kelas A/B/C seperti pada sistem <i>classfull addressing.</i></p>
         <p>Frmat penulisan: alamat_IP/prefix_length</p>
         <p>Contoh: 192.168.10.0/24</p>
+            </li>
         <ul>
             <li class="bullet">
                 <p>192.168.10.0 &rarr; alamat network</p>
@@ -403,7 +416,6 @@
         <hr>
         <br>
 
-        <ol class="angka">
             <li>Tujuan CIDR</li>
             <ul>
                 <li class="bullet">
@@ -422,7 +434,7 @@
             <hr>
             <br>
 
-            <li>Struktur CIDR</li>
+            <li>Struktur CIDR
             <p>IP address dibagi jadi:</p>
             <ul>
                 <li class="bullet">
@@ -444,11 +456,12 @@
                     <p>/24 &rarr; 24 bit network, 8 bit host.</p>
                 </li>
             </ul>
+            </li>
             <hr>
             <br>
 
-            <li>Tabel CIDR IPv4</li>
-        </ol>
+            <li>Tabel CIDR IPv4
+        
             <table>
                 <tr>
                     <th>CIDR</th>
@@ -516,6 +529,194 @@
             <br>
             <p>Contoh diagram CIDR</p>
             <img src="../images/modul/image15.png" alt="Diagram CIDR" class="img-clickable">
+            </li>
+            <br>
+
+            <li>Cara Menghitung CIDR
+                <p>Langkah-langkah:</p>
+                <ol class="angka">
+                    <li class="sub2">
+                        <p>Tentukan prefix length /x.</p>
+                    </li>
+                    <li class="sub2">
+                        <p>Hitung jumlah bit host = 32 - x32 -x.</p>
+                    </li>
+                    <li class="sub2">
+                        <p>Hitung host usable = 2bit host - 22^ {\text{bit host}} - 2.</p>
+                    </li>
+                    <li class="sub2">
+                        <p>Cari subnet mask dnegan mengubah bit network jadi 1 dan host jadi 0.</p>
+                    </li>
+                    <li class="sub2">
+                        <p>Network increment = 256-nilai oktet subnet mask yang berubah 256 - \text{nilai oktet subnet mask yang berubah}.</p>
+                    </li>
+                </ol>
+                <p>Contoh</p>
+                <ul>
+                    <li class="bullet">
+                        <p>192.168.10.0/26</p>
+                        <ul class="circle">
+                            <li>
+                                <p>Prefix: /26 &rarr; bit host = 6</p>
+                            </li>
+                            <li>
+                                <p>Host usable = 26-2=622^6-2=62</p>
+                            </li>
+                            <li>
+                                <p>Subnet mask: 255.255.255.192</p>
+                            </li>
+                            <li>
+                                <p>Increment: 256 -192 = 64</p>
+                            </li>
+                            <li>
+                                <p>Range subnet:</p>
+                            </li>
+                            <ol class="angka">
+                                <li class="sub2">
+                                    <p>192.168.10.0 - 192.168.10.63</p>
+                                </li>
+                                <li class="sub2">
+                                    <p>192.168.10.64 - 192.168.10.127</p>
+                                </li>
+                                <li class="sub2">
+                                    <p>192.168.10.128 - 192.168.10.191</p>
+                                </li>
+                                <li class="sub2">
+                                    <p>192.168.10.192 - 192.168.10.255</p>
+                                </li>
+                            </ol>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <hr>
+            <br>
+            <li>Keuntungan CIDR</li>
+            <ul>
+                <li class="bullet">
+                    <p>Efisien: Tidak membuang banyak IP untuk jaringan kecil.</p>
+                </li>
+                <li class="bullet">
+                    <p>Fleksibel: Bisa membuat subnet sesuai kebutuhan.</p>
+                </li>
+                <li class="bullet">
+                    <p>Routing ringaks: Menggabungkan banyak jaringan menjadi satu <i>route</i>.</p>
+                </li>
+            </ul>
+            <hr>
+
+        </ol>
+    </div>
+
+    <h1 class="neon-title" id="materi4">C. Subnetting</h1>
+    <div class="full-box">
+        <ol class="angka">
+            <li>Pengertian Subnetting
+        <p class="mobile">Subnetting adalah proses membagi jaringan yang lebih besar menjadi subnet-subnet yang lebih kecil dan berukuran tetap. Subnetting menggunakan subnet mask yang seragam untuk semua subnet. Setiap subnet memiliki subnet mask yang sama, yang berarti semua subnet akan memiliki jumlah IP yang tersedia yang sama. Subnetting dapat menyebabkan penggunaan alamat IP yang tidak efisien, karena setiap subnet mungkin tidak sepenuhnya memanfaatkan semua alamat yang tersedia.</p>
+        <p class="mobile">Subnetting berguna bagi organisasi yang perlu mengelompokkan jaringan mereka menjadi sejumlah jaringan kecil yang tetap, seperti memisahkan departemen atau fungsi.</p>
+        <hr>
+        <br>
+        <h3 class="judulkecil">Contoh Soal</h3>
+        <p class="mobile">Kita punya network 192.168.10.0/24 dan ingin membuat 4 subnet yang sama besar.</p>
+        <hr>
+        <p class="mobile">Langkah 1 &#8212; Tentukan jumlah bit untuk subnet</p>
+        <ul>
+            <li class="bullet">
+                <p>Subnet awal /24 berarti: 255.255.255.0 &rarr; 8 bit host. 11111111.11111111.11111111.00000000 = 24</p>
+            </li>
+            <li class="bullet">
+                <p>Kita butuh 4 subnet &rarr; rumus: 2<sup>n</sup> &ge; jumlah subnet. Di mana n = jumlah bit yang "dipinjam" dari host untuk subnet ID. 2<sup>2</sup> = 4 &rarr; jadi kita pinjam 2 bit dari bagian host. 11111111.11111111.11111111.11000000</p>
+            </li>
+        </ul>
+        <hr>
+        <p class="mobile">Langkah 2 &#8212; Subnet mask baru</p>
+        <ul>
+            <li class="bullet">
+                <p>Mask awal: /24</p>
+            </li>
+            <li class="bullet">
+                <p>Tambah 2 bit: /26</p>
+            </li>
+            <li class="bullet">
+                <p>Subnet mask /26 = 255.255.255.192 (192 dalam biner: 11000000)</p>
+            </li>
+        </ul>
+        <hr>
+        <p class="mobile">Langkah 3 &#8212; Hitung jumlah host per subnet</p>
+        <ul>
+            <li class="bullet">
+                <p>Sisa bit host = 8-2=6 bit.</p>
+            </li>
+            <li class="bullet">
+                <p>Host per subnet = 2<sup>6</sup>-2=64-2 = 62 host</p>
+            </li>
+        </ul>
+        <hr>
+        <p class="mobile">Langkah 4 &#8212; Tentukan network ID & broadcast tiap subnet. Increment = 256 -192 =64.</p>
+        <h3 class="judulkecil">Maka:</h3>
+        <ol class="angka">
+            <li class="sub2">
+                <p>Subnet 1:
+                    <ul class="circle">
+                        <li>
+                            <p>Network: 192.168.10.0</p>
+                        </li>
+                        <li>
+                            <p>Broadcast: 192.168.10.63</p>
+                        </li>
+                        <li>
+                            <p>Host: 192.168.10.1 - 192.168.10.62</p>
+                        </li>
+                    </ul>
+                </p>
+            </li>
+            <li class="sub2">
+                <p>Subnet 2:
+                    <ul class="circle">
+                        <li>
+                            <p>Network: 192.168.10.64</p>
+                        </li>
+                        <li>
+                            <p>Broadcast: 192.168.10.127</p>
+                        </li>
+                        <li>
+                            <p>Host: 192.168.10.65 - 192.168.10.126</p>
+                        </li>
+                    </ul>
+                </p>
+            </li>
+            <li class="sub2">
+                <p>Subnet 3:
+                    <ul class="circle">
+                        <li>
+                            <p>Network: 192.168.10.128</p>
+                        </li>
+                        <li>
+                            <p>Broadcast: 192.168.10.191</p>
+                        </li>
+                        <li>
+                            <p>Host: 192.168.10.129 – 192.168.10.190</p>
+                        </li>
+                    </ul>
+                </p>
+            </li>
+            <li class="sub2">
+                <p>Subnet 4:
+                    <ul class="circle">
+                        <li>
+                            <p>Network: 192.168.10.192</p>
+                        </li>
+                        <li>
+                            <p>Broadcast: 192.168.10.255</p>
+                        </li>
+                        <li>
+                            <p>Host: 192.168.10.193 – 192.168.10.254</p>
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        </ol>
+            </li>
 
             <br>
             <br>
@@ -523,8 +724,10 @@
          <button class="page-button" onclick="setActive(this); location.href='pj.html'">1</button>
          <button class="page-button" onclick="setActive(this); location.href='pj2.html'">2</button>
          <button class="page-button active" onclick="setActive(this); location.href='pj3.html'">3</button>
+         <button class="page-button" onclick="setActive(this); location.href='pj4.html'">4</button>
+         <button class="page-button" onclick="setActive(this); location.href='pj5.html'">5</button>
       </div>
-
+        </ol>
     </div>
 
     <!-- Modal Zoom Gambar -->

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+   <!--=============== CSS ===============-->
+   <link rel="shortcut icon" href="../images/apaycoding_logo_copy.png" type="image/x-icon">
+   <link rel="stylesheet" href="../../styles.css">
+   <link rel="stylesheet" href="../css/mapel.css">
+
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2&display=swap" rel="stylesheet">
+
+   <title>Keamanan Jaringan</title>
+</head>
+<style>
+   body {
+      background-image: url(../images/dark-background-web.png);
+      /* Pindahkan background ke CSS utama */
+   }
+</style>
+
+<body>
+
+   <!--=============== HEADER ===============-->
+   <header class="header">
+      <nav class="nav container">
+         <div class="nav__data">
+            <a href="../../index.html" class="nav__logo">
+               <a href="../../index.html" class="navbar-logo"><img src="../images/apaycoding_logo_copy.png" alt="">IpayyCoding</a>
+            </a>
+
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line nav__burger"></i>
+               <i class="ri-close-line nav__close"></i>
+            </div>
+         </div>
+
+         <!--=============== NAV MENU ===============-->
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li><a href="../../index.html" class="nav__link">Home</a></li>
+
+               <li><a href="../pages/updates.html" class="nav__link">Updates</a></li>
+
+               <!--=============== DROPDOWN 1 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Materi <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     
+
+                     <!--=============== DROPDOWN SUBMENU ===============-->
+                     <li class="dropdown__subitem">
+                        <div class="dropdown__link">
+                           <i class="ri-award-line"></i> Produktif <i class="ri-add-line dropdown__add"></i>
+                        </div>
+
+                        <ul class="dropdown__submenu">
+                           <li>
+                              <a href="kj.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i> KJ
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="tjkn.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i> TJKN
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="pkk.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i> PKK
+                              </a>
+                           </li>
+                           <li>
+                              <a href="pj.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i>PJ
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+
+               
+               <!--=============== DROPDOWN 2 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Source Code <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-code-line"></i> Navbar
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-code-line"></i> Parallax
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+               <!--=============== DROPDOWN 3 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Our Social <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="https://discord.gg/Gu3qRvqv" target="_blank" class="dropdown__link">
+                           <i class="ri-discord-fill"></i> Discord Server's
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="https://github.com/dafaalfariza" target="_blank" class="dropdown__link">
+                           <i class="ri-github-fill"></i> GitHub
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="https://www.instagram.com/sajowataru_/" target="_blank" class="dropdown__link">
+                           <i class="ri-instagram-fill"></i> Instagram
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="https://x.com/CallMeDaff7" target="_blank" class="dropdown__link">
+                           <i class="ri-twitter-x-line"></i> Twitter
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+               <li><a href="#" class="nav__link">Contact</a></li>
+
+            </ul>
+         </div>
+      </nav>
+   </header>
+
+   <!-- Body -->
+    <h1 class="neon-title" id="materi5">D. VLSM (Variable Length Subnet Mask)</h1>
+    <div class="full-box">
+        <ol class="angka">
+            <li>Pengertian VLSM
+                <p>VLSM adalah teknik subnetting di mana kita memberikan subnet mask yang berbeda-beda untuk setiap subnet sesuai kebutuhan host.</p>
+            </li>
+            <ul>
+                <li class="bullet">
+                    <p>Berbeda dengan subnetting biasa yang semua subnetnya sama besar, di VLSM kita bisa membuat ada subnet besar dan subnet kecil dalam satu network.</p>
+                </li>
+                <li class="bullet">
+                    <p>Tujuannya: menghemat IP address dan mengoptimalkan alokasi.</p>
+                </li>
+            </ul>
+            <hr>
+            <br>
+
+            <li>Kelebihan VLSM</li>
+            <ul>
+                <li class="bullet">
+                    <p>Menghemat penggunaan IP.</p>
+                </li>
+                <li class="bullet">
+                    <p>Fleksibel sesuai kebutuhan tiap segmen jaringan.</p>
+                </li>
+                <li class="bullet">
+                    <p>Mengurangi pemborosan alamat (waste IP).</p>
+                </li>
+                <li class="bullet">
+                    <p>Cocok untuk desain jaringan skala besar dan kompleks.</p>
+                </li>
+            </ul>
+            <hr>
+            <br>
+
+            <li>Kekurangan VLSM</li>
+            <ul>
+                <li class="bullet">
+                    <p>Perhitungan lebih rumit dibanding subnetting biasa.</p>
+                </li>
+                <li class="bullet">
+                    <p>Membutuhkan router yang mendukung <i>classes routing</i> (semua router modern sudah mendukung).</p>
+                </li>
+            </ul>
+            <hr>
+            <br>
+
+            <li>Langkah-langkah VLSM</li>
+            <ol class="angka">
+                <li class="sub2">
+                    <p>Tentukan kebutuhan host di setiap subnet.</p>
+                </li>
+                <li class="sub2">
+                    <p>Urutkan kebutuhan host dari yang terbesar ke terkecil.</p>
+                </li>
+                <li class="sub2">
+                    <p>Alokasikan subnet mask terkecil yang cukup untuk jumlah host tersebut.</p>
+                </li>
+                <li class="sub2">
+                    <p>Gunakan alamat IP secara berurutan, dari network terkecil hingga terbesar.</p>
+                </li>
+                <li class="sub2">
+                    <p>Pastikan tidak ada overlap.</p>
+                </li>
+            </ol>
+            <hr>
+            <br>
+
+            <li>Contoh Kasus</li>
+            <p class="mobile">Kita punya network 192.168.10.0/24 untuk 4 subnet dengan kebutuhan host:</p>
+            <ul>
+                <li class="bullet">
+                    <p>Subnet A: 100 host</p>
+                </li>
+                <li class="bullet">
+                    <p>Subnet B: 50 host</p>
+                </li>
+                <li class="bullet">
+                    <p>Subnet C: 25 host</p>
+                </li>
+                <li class="bullet">
+                    <p>Subnet D: 10 host</p>
+                </li>
+            </ul>
+            <hr>
+            <br>
+
+            <p class="mobile">Langkah 1 &#8212; Urutkan dari terbesar</p>
+            <ol class="angka">
+                <li class="sub2">
+                    <p>Subnet A: 100 host</p>
+                </li>
+                <li class="sub2">
+                    <p>Subnet B: 50 host</p>
+                </li>
+                <li class="sub2">
+                    <p>Subnet C: 25 host</p>
+                </li>
+                <li class="sub2">
+                    <p>Subnet D: 10 host</p>
+                </li>
+            </ol>
+            <hr>
+            <br>
+
+            <p class="mobile">Langkah 2 &#8212; Tentukan prefix masing-masing</p>
+            <p class="mobile">Rumus host:</p>
+            <p class="mobile">2<sup>host bit</sup> - 2 &ge; jumlah host</p>
+            <ul>
+                <li class="bullet">
+                    <p>Subnet A: butuh 100 host &rarr; /25 (128 alamat,126 usable)</p>
+                </li>
+                <li class="bullet">
+                    <p>Subnet B: butuh 50 host &rarr; /26 (64 alamat,62 usable)</p>
+                </li>
+                <li class="bullet">
+                    <p>Subnet C: butuh 25 host &rarr; /27 (32 alamat,30 usable)</p>
+                </li>
+                <li class="bullet">
+                    <p>Subnet D: butuh 10 host &rarr; /28 (16 alamat,14 usable)</p>
+                </li>
+            </ul>
+            <hr>
+            <br>
+
+            <p class="mobile">Langkah 3 &#8212; Alokasi alamat</p>
+            <ol class="angka">
+                <li class="sub2">
+                    <p>Subnet A:
+                        <ul class="circle">
+                            <li>
+                                <p>Network: 192.168.10.0/25</p>
+                            </li>
+                            <li>
+                                <p>Host: 192.168.10.1 - 192.168.10.126</p>
+                            </li>
+                            <li>
+                                <p>Broadcast: 192.168.10.127</p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+                <li class="sub2">
+                    <p>Subnet B:
+                        <ul class="circle">
+                            <li>
+                                <p>Network: 192.168.10.128/26</p>
+                            </li>
+                            <li>
+                                <p>Host: 192.168.10.129 – 192.168.10.190</p>
+                            </li>
+                            <li>
+                                <p>Broadcast: 192.168.10.191</p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+                <li class="sub2">
+                    <p>Subnet C:
+                        <ul class="circle">
+                            <li>
+                                <p>Network: 192.168.10.192/27</p>
+                            </li>
+                            <li>
+                                <p>Host: 192.168.10.193 – 192.168.10.222</p>
+                            </li>
+                            <li>
+                                <p>Broadcast: 192.168.10.223</p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+                <li class="sub2">
+                    <p>Subnet D:
+                        <ul class="circle">
+                            <li>
+                                <p>Network: 192.168.10.224/28</p>
+                            </li>
+                            <li>
+                                <p>Host: 192.168.10.225 – 192.168.10.238</p>
+                            </li>
+                            <li>
+                                <p>Broadcast: 192.168.10.239</p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+            </ol>
+            <hr>
+            <br>
+
+            <h3 class="judulkecil">Perbandingan ClassFull, CIDR, Subnetting dan VLSM</h3>
+            <img src="../images/modul/image16.png" alt="" class="img-clickable">
+            <ul>
+                <li class="bullet">
+                    <p>Classfull = jaman dulu, kaku, pakai kelas.</p>
+                </li>
+                <li class="bullet">
+                    <p>CIDR = jaman modern, fleksibel, bisa gabung atau pecah network.</p>
+                </li>
+                <li class="bullet">
+                    <p>Subnetting = pecah network besar &rarr; subnet sama besar.</p>
+                </li>
+                <li class="bullet">
+                    <p>VLSM = pecah network besar &rarr; subnet beda-beda ukuran.</p>
+                </li>
+            </ul>
+
+            <ol class="romawi" start="3">
+                <li>Alat dan Bahan</li>
+            </ol>
+            <ol>
+                <li class="sub2">
+                    <p>Komputer PC jaringan LAN</p>
+                </li>
+            </ol>
+
+            <ol class="romawi" start="4">
+                <li>Langkah Kerja</li>
+            </ol>
+            <ol type="a">
+                <li class="sub2">Topologi Jaringan
+                    <img src="../images/modul/image17.png" alt="" class="img-clickable">
+                </li>
+                <li class="sub2">Tabel IP Address
+                    <table>
+                        <tr>
+                    <th>No</th>
+                    <th>Nama Client</th>
+                    <th>IP Address</th>
+                    <th>Subnet Mask</th>
+                    <th>Nama file share</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>PC A</td>
+                    <td>192.168.10.1</td>
+                    <td>255.255.255.0</td>
+                    <td>RPL</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>PC B</td>
+                    <td>192.168.10.2</td>
+                    <td>255.255.255.0</td>
+                    <td>TKJ</td>
+                </tr>
+                    </table>
+                </li>
+                <li class="sub2">Persiapan  Praktik
+                    <ol class="angka">
+                        <li class="subjudul">
+                            <p>Mempersiapkan PC 2 unit yang sudah terkoneksi kabel jaringan</p>
+                        </li>
+                        <li class="subjudul">
+                            <p>Memahami tentang pengalamatan Classfull, CIDR, Subnetting dan VLSM</p>
+                        </li>
+                        <li class="subjudul">
+                            <p>Konfigurasi IP Address Classfull, CIDR, Subnetting dan VLSM</p>
+                        </li>
+                        <li class="subjudul">
+                            <p>Pengujian jaringan</p>
+                        </li>
+                    </ol>
+                </li>
+                <li class="sub2">Konfigurasi Jaringan</li>
+            </ol>
+            <br>
+            <ol class="romawikecil">
+                <li>Langkah kerja
+                    <p class="mini" style="color: hotpink;"><u>Pada PC A</u></p>
+                </li>
+            </ol>
+            <ol class="angka">
+                <li class="mini" style="color: hotpink">
+                    <p class="mini"><b>Buka Control Panel</b></p>
+                </li>
+                <li class="mini" style="color: hotpink">
+                    <p class="mini">Klik Start > ketik <i>Control Panel</i> > Buka Control Panel + <b>Network and Internet</b></p>
+                    <img src="../images/modul/image18.png" alt="" class="img-clickable">
+                    <ol class="mini" type="a">
+                        <li class="mini">
+                            <p class="mini"><b>Pilih Network and Internet</b> Klik <i>Network and Sharing Center.</i></p>
+                            <img src="../images/modul/image19.png" alt="" class="img-clickable">
+                        </li>
+                        <li class="mini">
+                            <p class="mini"><b>Klik Change Adapter Settings</b> Di sebelah kiri, klik <i>Change adapter settings.</i></p>
+                            <img src="../images/modul/image20.png" alt="" class="img-clickable">
+                        </li>
+                        <li class="mini">
+                            <p class="mini"><b>Pilih koneksi LAN (Ethernet)</b> Klik kanan pada <i>Ethernet</i> (atau nama koneksi LAN kamu) > pilih <i>Properties.</i></p>
+                            <img src="../images/modul/image21.png" alt="" class="img-clickable">
+                            <br>
+                            <img src="../images/modul/image22.png" alt="" class="img-clickable">
+                        </li>
+                        <li class="mini">
+                            <p class="mini"><b>Pilih Internet Protocol Version 4 (TCP/IPv4)</b></p>
+                            <img src="../images/modul/image23.png" alt="" class="img-clickable">
+                        </li>
+                        <li class="mini">
+                            <p class="mini">Klik dua kali atau sekali lalu tekan <i>Properties.</i></p>
+                        </li>
+                    </ol>
+                </li>
+                <li class="mini" style="color: hotpink">
+                    <p class="mini"><b>Masukkan IP Address manual</b></p>
+                    <img src="../images/modul/image24.png" alt="" class="img-clickable">
+                </li>
+                <li class="mini" style="color: hotpink">
+                    <p class="mini">Tekan ok untuk menyelesaikannya</p>
+                </li>
+                <li class="mini" style="color: hotpink">
+                    <p class="mini">Ini masih untuk PC A, selanjutnya lakukan untuk PC B dengan IP Address yang berbeda sesuai tabel IP Address seperti dibawah ini</p>
+                    <img src="../images/modul/image25.png" alt="" class="img-clickable">
+                </li>
+                <li class="mini" style="color: hotpink">
+                    <p class="mini">Lakukan pengujian koneksi melalui PC A ke PC B. Buka <i>Command Prompt</i> (Windows + R) kemudian ketik <b>cmd</b>, enter.</p>
+                    <img src="../images/modul/image26.png" alt="" class="img-clickable">
+                    <p class="mini">Ketik : <b>ping 192.168.10.2</b> yang merupakan Alamat PC B</p>
+                    <img src="../images/modul/image27.png" alt="" class="img-clickable">
+                    <p class="mini">Ini menandakan jaringan LAN sudah terkoneksi</p>
+                    <p class="mini">Jika seperti dibawah ini, berarti ada yang salah pada subnetmask-nya</p>
+                    <img src="../images/modul/image28.png" alt="" class="img-clickable">
+                </li>
+                <li class="mini" style="color: hotpink">
+                    <p class="mini">Sampai disini konfigurasi IP Address pada jaringan LAN sudah selesai.</p>
+                </li>
+            </ol>
+
+            <br>
+            <br>
+            <div class="page-buttons">
+         <button class="page-button" onclick="setActive(this); location.href='pj.html'">1</button>
+         <button class="page-button" onclick="setActive(this); location.href='pj2.html'">2</button>
+         <button class="page-button" onclick="setActive(this); location.href='pj3.html'">3</button>
+         <button class="page-button active" onclick="setActive(this); location.href='pj4.html'">4</button>
+         <button class="page-button" onclick="setActive(this); location.href='pj5.html'">5</button>
+      </div>
+        </ol>
+    </div>
+
+   <!-- Modal Zoom Gambar -->
+    <div id="imgModal" class="img-modal">
+        <span class="img-modal-close">&times;</span>
+        <img class="img-modal-content" id="imgModalContent">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../../main.js"></script>
+</body>
