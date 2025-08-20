@@ -1,0 +1,86 @@
+body {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 90px;
+}
+
+.introjudul {
+  font-size: 2rem;
+  padding-left: 40px;
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+}
+
+.introjudulutama {
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+}
+
+.introp {
+  font-family: monospace;
+  font-size: 1.3rem;
+  text-indent: 40px;
+  color: #fff;
+}
+
+.intronop {
+    color: #fff;
+    font-family: monospace;
+    font-size: 1.3rem;
+}
+
+ul.bullet {
+  list-style-type: disc; /* bulat penuh */
+  list-style-position: outside; /* bullet di luar text */
+  margin-left: 20px; /* kasih jarak ke kiri */
+  padding-left: 20px; /* penting kalau bullet hilang */
+  color: yellowgreen;
+}
+
+code {
+  background-color: #515151; /* abu-abu gelap */
+  padding: 2px 2px;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+pre,
+pre code {
+  overflow-x: auto;   /* kalau ada code panjang bisa di-scroll horizontal */
+  white-space: pre;   /* pastikan spasi ditampilkan normal */
+  margin: 0.3em 0;      /* kasih jarak atas-bawah */
+  border-radius: 8px; /* biar rounded */
+}
+
+.language-html,
+.language-css,
+.language-js {
+  font-size: 1.4rem;
+}
+    
+
+/* Mobile */
+@media (max-width: 468px) {
+  .introjudul {
+    font-size: 1.5rem;
+    padding-left: 20px;
+  }
+
+  .introjudulutama {
+    font-size: 1.8rem;
+  }
+
+  .introp {
+    margin: 0 20px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+}
+
+@media (min-width: 769px) {
+}

@@ -129,3 +129,6 @@ function setActive(button) {
     // tambahkan "active" ke button yang diklik
     button.classList.add('active');
   }
+
+  // Highlight JS
+  hljs.highlightAll();

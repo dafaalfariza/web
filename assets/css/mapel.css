@@ -81,6 +81,10 @@ p {
     color: yellowgreen;
 }
 
+.subjudul {
+    font-size: 2.5rem;
+}
+
 h2.sub {
     font-size: 1.5em;
     margin: 0 auto 20px;

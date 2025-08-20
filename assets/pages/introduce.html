@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- FONTS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/a11y-dark.min.css">
+    <script>hljs.highlightAll();</script>
+
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+   <!--=============== CSS ===============-->
+   <link rel="shortcut icon" href="../images/apaycoding_logo_copy.png" type="image/x-icon">
+   <link rel="stylesheet" href="../../styles.css">
+   <link rel="stylesheet" href="../css/mapel.css">
+   <link rel="stylesheet" href="../css/introduce.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+   <!-- Highlight -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+
+   <title>Homepage</title>
+</head>
+
+<style>
+   body {
+      background-image: url(../images/circle-background.jpg);
+      /* Pindahkan background ke CSS utama */
+   }
+</style>
+
+<body>
+
+   <!--=============== HEADER ===============-->
+   <header class="header">
+      <nav class="nav container">
+         <div class="nav__data">
+            <a href="../../index.html" class="nav__logo">
+               <a href="../../index.html" class="navbar-logo"><img src="../images/apaycoding_logo_copy.png" alt="">IpayyCoding</a>
+            </a>
+
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line nav__burger"></i>
+               <i class="ri-close-line nav__close"></i>
+            </div>
+         </div>
+
+         <!--=============== NAV MENU ===============-->
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li><a href="../../index.html" class="nav__link">Home</a></li>
+
+               <li><a href="assets/pages/updates.html" class="nav__link">Updates</a></li>
+
+               <!--=============== DROPDOWN 1 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Materi <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     
+
+                     <!--=============== DROPDOWN SUBMENU ===============-->
+                     <li class="dropdown__subitem">
+                        <div class="dropdown__link">
+                           <i class="ri-award-line"></i> Produktif <i class="ri-add-line dropdown__add"></i>
+                        </div>
+
+                        <ul class="dropdown__submenu">
+                           <li>
+                              <a href="kj.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i> KJ
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="tjkn.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i> TJKN
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="pkk.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i> PKK
+                              </a>
+                           </li>
+                           <li>
+                              <a href="pj.html" class="dropdown__sublink">
+                                 <i class="ri-book-read-line"></i>PJ
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+
+               
+               <!--=============== DROPDOWN 2 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Learning Code <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="introduce.html" class="dropdown__link">
+                           <i class="ri-code-line"></i> Introduce
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-code-line"></i> Parallax
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+               <!--=============== DROPDOWN 3 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Our Social <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="https://discord.gg/Gu3qRvqv" target="_blank" class="dropdown__link">
+                           <i class="ri-discord-fill"></i> Discord Server's
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="https://github.com/dafaalfariza" target="_blank" class="dropdown__link">
+                           <i class="ri-github-fill"></i> GitHub
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="https://www.instagram.com/sajowataru_/" target="_blank" class="dropdown__link">
+                           <i class="ri-instagram-fill"></i> Instagram
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="https://x.com/CallMeDaff7" target="_blank" class="dropdown__link">
+                           <i class="ri-twitter-x-line"></i> Twitter
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+               <li><a href="#" class="nav__link">Contact</a></li>
+
+            </ul>
+         </div>
+      </nav>
+   </header>
+   <!-- Body -->
+    <div class="container">
+   <h1 class="introjudulutama">🔹 HTML (HyperText Markup Language)</h1>
+   <br><br>
+   <p class="introp">HTML adalah <b>bahasa markup</b> yang digunakan untuk membuat struktur dasar halaman web.</p>
+   <p class="intronop">👉 Bisa dibilang kerangka atau tulang dari website.</p>
+   <ul class="bullet">
+    <li>
+        <p class="intronop">Contoh elemen: heading (<code>&lt;h1&gt;</code>), paragraf (<code>&lt;p&gt;</code>), gambar (<code>&lt;img&gt;</code>), link (<code>&lt;a&gt;</code>).</p>
+    </li>
+    <li>
+        <p class="intronop">Tanpa HTML, halaman web tidak punya isi atau struktur.</p>
+    </li>
+   </ul>
+
+   <p class="intronop">Contoh:</p>
+   <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;This is my first paragraph&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+
+    <h1 class="introjudul">📌 Struktur Dasar</h1><br>
+    <p class="intronop"><code>&lt;!DOCTYPE html&gt;</code> &rarr; deklarasi jenis dokumen HTML.</p>
+    <p class="intronop"><code>&lt;html&gt;</code> &rarr; elemen root, membungkus semua isi halaman.</p>
+    <p class="intronop"><code>&lt;head&lt;</code> &rarr; berisi metadata (judul, link css, script, dll).</p>
+    <p class="intronop"><code>&lt;titke&gt;</code> &rarr; judul halaman (muncul di tab browser).</p>
+    <p class="intronop"><code>&lt;body&gt;</code> &rarr; isi utama halaman yang tampil ke user.</p>
+    <br><hr>
+    <br>
+
+    <h1 class="introjudul">📌 Teks & Heading</h1><br>
+    <p class="intronop"><code>&lt;h1&gt; - &lt;h6&gt;</code> &rarr; heading (judul) dari besar &rarr; kecil.</p>
+    <p class="intronop"><code>&lt;p&gt;</code> &rarr; paragraf.</p>
+    <p class="intronop"><code>&lt;span&gt;</code> &rarr; teks inline (biasa digunakan untuk styling).</p>
+    <p class="intronop"><code>&lt;br&gt;</code> &rarr; break baris baru.</p>
+    <p class="intronop"><code>&lt;hr&gt;</code> &rarr; garis horizontal pemisah.</p>
+    <br><hr>
+    <br>
+
+    <h1 class="introjudul">📌 Format Teks</h1><br>
+    <p class="intronop"><code>&lt;b&gt;</code> &rarr; teks tebal (bold).</p>
+    <p class="intronop"><code>&lt;i&gt;</code> &rarr; teks miring (italic).</p>
+    <p class="intronop"><code>&lt;u&gt;</code> &rarr; teks bergaris bawah (underline).</p>
+    <p class="intronop"><code>&lt;strong&gt;</code> &rarr; teks penting (biasanya tebal, punya arti semantik).</p>
+    <p class="intronop"><code>&lt;em&gt;</code> &rarr; teks ditekankan (biasanya miring, ounya arti semantik).</p>
+    <p class="intronop"><code>&lt;mark&gt;</code> &rarr; teks disorot (highlight).</p>
+    <p class="intronop"><code>&lt;small&gt;</code> &rarr; teks kecil.</p>
+    <p class="intronop"><code>&lt;del&gt;</code> &rarr; teks coret.</p>
+    <p class="intronop"><code>&lt;ins&gt;</code> &rarr; teks yang ditambahkan (garis bawah).</p>
+    <p class="intronop"><code>&lt;sub&gt;</code> &rarr; teks subscript (misal: H<sub>2</sub>O).</p>
+    <p class="intronop"><code>&lt;sup&gt;</code> &rarr; teks superscript (misal: x<sub>2</sub>).</p>
+    <br><hr>
+    <br>
+
+    <h1 class="introjudul">📌 List (Daftar)</h1><br>
+    <p class="intronop"><code>&lt;ul&gt;</code> &rarr; unordered list (bullet).</p>
+    <p class="intronop"><code>&lt;ol&gt;</code> &rarr; ordered list (angka/huruf).</p>
+    <p class="intronop"><code>&lt;li&gt;</code> &rarr; item di dalam list.</p>
+    <p class="intronop"><code>&lt;dl&gt;</code> &rarr; description list.</p>
+    <p class="intronop"><code>&lt;dt&gt;</code> &rarr; istilah dalam description list.</p>
+    <p class="intronop"><code>&lt;dd&gt;</code> &rarr; deskripsi dari istilah.</p>
+    <br><hr>
+    <br>
+
+    <h1 class="introjudul">📌 Link & Media</h1><br>
+    <p class="intronop"><code>&lt;a&gt;</code> &rarr; hyperlink (link ke html lain).</p>
+    <p class="intronop"><code>&lt;img&gt;</code> &rarr; menampilkan gambar.</p>
+    <p class="intronop"><code>&lt;video&gt;</code> &rarr; menampilkan video.</p>
+    <p class="intronop"><code>&lt;audio&gt;</code> &rarr; menampilkan audio.</p>
+    <p class="intronop"><code>&lt;&gt;source</code> &rarr; sumber file media (untuk <code>&lt;video&gt;</code> / <code>&lt;audio&gt;</code>).</p>
+    <p class="intronop"><code>&lt;&gt;iframe</code> &rarr; menyematkan halaman lain (misalnya YouTube).</p>
+    <br><hr>
+    <br>
+
+    <h1 class="introjudul">📌 Table</h1><br>
+    <p class="intronop"><code>&lt;table&gt;</code> &rarr; membuat tabel.</p>
+    <p class="intronop"><code>&lt;tr&gt;</code> &rarr; table row (baris).</p>
+    <p class="intronop"><code>&lt;td&gt;</code> &rarr; table data (kolom biasa).</p>
+    <p class="intronop"><code>&lt;th&gt;</code> &rarr; table header (kolom judul, biasanya tebal).</p>
+    <p class="intronop"><code>&lt;thead&gt;</code> &rarr; kepala tabel.</p>
+    <p class="intronop"><code>&lt;tbody&gt;</code> &rarr; isi tabel.</p>
+    <p class="intronop"><code>&lt;tfoot&gt;</code> &rarr; kaki tabel.</p>
+    <p class="intronop"><code>&lt;caption&gt;</code> &rarr; judul tabel.</p>
+    <br><hr>
+    <br>
+
+    <h1 class="introjudul">📌 Formulir (Input Data)</h1><br>
+    <p class="intronop"><code>&lt;form&gt;</code> &rarr; wadah form.</p>
+    <p class="intronop"><code>&lt;input&gt;</code> &rarr; field input (text, number, chehckbox, radio, dll).</p>
+    <p class="intronop"><code>&lt;textarea&gt;</code> &rarr; input teks panjang.</p>
+    <p class="intronop"><code>&lt;button&gt;</code> &rarr; tombol.</p>
+    <p class="intronop"><code>&lt;select&gt;</code> &rarr; dropdown.</p>
+    <p class="intronop"><code>&lt;option&gt;</code> &rarr; opsi dalam dropdown.</p>
+    <p class="intronop"><code>&lt;label&gt;</code> &rarr; label untuk input.</p>
+    <p class="intronop"><code>&lt;fieldset&gt;</code> &rarr; kelompokkan elemen dalam form.</p>
+    <p class="intronop"><code>&lt;legend&gt;</code> &rarr; judul kelompok dalam fieldset.</p>
+    <br><hr>
+    <br>
+
+    <h1 class="introjudul">📌 Script & Style</h1><br>
+    <p class="intronop"><code>&lt;style&gt;</code> &rarr; menulis CSS langsung di HTML.</p>
+    <p class="intronop"><code>&lt;script&gt;</code> &rarr; menulis JavaScript.</p>
+    <p class="intronop"><code>&lt;link&gt;</code> &rarr; menghubungkan file CSS.</p>
+    <p class="intronop"><code>&lt;meta&gt;</code> &rarr; metadata (charset, viewport, SEO, dll).</p>
+    <br><hr>
+    <br>
+
+    <p class="intronop">👉 Jadi intinya:</p>
+    <ul class="bullet">
+      <li>
+         <p class="intronop"><b>Struktur</b> &rarr; <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;main&gt;</code>, dll.</p>
+      </li>
+      <li>
+         <p class="intronop"><b>Konten</b> &rarr; <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code>.</p>
+      </li>
+      <li>
+         <p class="intronop"><b>Layout</b> &rarr; <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>.</p>
+      </li>
+      <li>
+         <p class="intronop"><b>Interaktif</b> &rarr; <code>&lt;form&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>.</p>
+      </li>
+    </ul>
+    <br><hr>
+    <br>
+
+    <h1 class="introjudulutama">🔹 CSS (Cascading Style Sheets)</h1>
+    <p class="introp">CSS adalah <b>bahasa untuk mengatur tampilan (desain) HTML.</b></p>
+    <p class="intronop">👉 Digunakan untuk mengatur warna, ukuran, font, tata letak, dll.</p>
+    <ul class="bullet">
+      <li>
+         <p class="intronop">HTML bikin kerangka &rarr; CSS bikin tampilannya lebih menarik.</p>
+      </li>
+    </ul>
+    <p class="intronop">Contoh:</p>
+    <pre><code class="language-css">
+p {
+   color: white;
+   background-color: gray;
+   padding: 10px;
+}
+    </code></pre>
+    <br>
+
+<h1 class="introjudul">📌 Selector Dasar</h1><br>
+   <p class="intronop">Selector adalah "target" elemen HTML yang mau diatur.</p>
+   <p class="intronop"><code>p { }</code> &rarr; untuk semua paragraf.</p>
+   <p class="intronop"><code>.class { }</code> &rarr; untuk elemen dengan class tertentu.</p>
+   <p class="intronop"><code>;#id ( )</code> &rarr; untuk elemen dengan id tertentu.</p>
+   <br><hr>
+   <br>
+
+   <h1 class="introjudul">📌 Property Dasar</h1><br>
+   <p class="intronop">Beberapa properti CSS yang sering dipakai:</p>
+   <p class="intronop"><code>&lt;color&gt;</code> &rarr; warna teks.</p>
+   <p class="intronop"><code>&lt;background-color&gt;</code> &rarr; warna latar.</p>
+   <p class="intronop"><code>&lt;font-size&gt;</code> &rarr; ukuran huruf.</p>
+   <p class="intronop"><code>&lt;font-family&gt;</code> &rarr; jenis huruf.</p>
+   <p class="intronop"><code>&lt;margin&gt;</code> &rarr; jarak luar elemen.</p>
+   <p class="intronop"><code>&lt;padding&gt;</code> &rarr;jarak dalam elemen.</p>
+   <p class="intronop"><code>&lt;border&gt;</code> &rarr; garis tepi.</p>
+   <br><hr>
+   <br>
+
+   <h1 class="introjudulutama">🔹 JavaScript (JS)</h1><br>
+   <p class="intronop">JavaScript adalah <b>bahasa pemrograman untuk menambahkan interaktivitas pada web.</b></p>
+   <p class="intronop">👉 Membuat web lebih “hidup” (bisa klik tombol, animasi, validasi form, dll).</p>
+   <ul class="bullet">
+      <li>
+         <p class="intronop">Tanpa JS, web hanya statis.</p>
+      </li>
+      <li>
+         <p class="intronop">Dengan JS, Web bisa <b>dinamis</b> seperti game, kalkulator, popup, dll.</p>
+      </li>
+   </ul>
+   <p class="intronop">Contoh:</p>
+   <pre><code class="language-js">
+function salam() {
+  alert("Halo, selamat datang!");
+}
+   </code></pre>
+   <p class="intronop">Dipanggil lewat HTML:</p>
+   <pre><code class="language-html">
+&lt;button onclick="salam()"&gt;Klik Aku&lt;/button&gt;
+   </code></pre>
+   <br><hr>
+   <br>
+
+   <p class="intronop">📌 Jadi:</p>
+   <p class="intronop"><b>HTML = struktur / kerangka</b></p>
+   <p class="intronop"><b>CSS = tampilan / gaya</b></p>
+   <p class="intronop"><b>JavaScript = interaktivitas / logika</b></p>
+
+    </div>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="../../main.js"></script>
+   
+</body>
+
+</html>
