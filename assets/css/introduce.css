@@ -50,6 +50,7 @@ code {
 pre,
 pre code {
   overflow-x: auto;   /* kalau ada code panjang bisa di-scroll horizontal */
+  overflow-y: auto;
   white-space: pre;   /* pastikan spasi ditampilkan normal */
   margin: 0.3em 0;      /* kasih jarak atas-bawah */
   border-radius: 8px; /* biar rounded */
